@@ -21,7 +21,6 @@
 	</div>
 
 	<div id="desktop-nav">
-
 		<div class="small-12 columns" id="logo_nav">
 			<div class="row">
 				<div class="small-12 medium-4 large-3 columns">
@@ -37,6 +36,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="top-bar-right show-for-medium">
 		<?php joints_top_nav(); ?>	
 	</div>
