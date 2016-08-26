@@ -1,7 +1,16 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
 <?php get_template_part( 'parts/explore', 'ksas' ); ?>
+
+<?php if(is_mobile()) :  ?>
 <div class="top-bar" id="top-bar-menu">
+<?php else : ?>
+	<?php if (is_front_page()) : ?>
+		<div class="top-bar backstretch-banner-home" id="top-bar-menu">
+	<?php else : ?>
+		<div class="top-bar backstretch-banner" id="top-bar-menu">
+	<?php endif; ?>
+<?php endif;?>
 
 	<div id="mobile-nav">
   		<div class="row">

@@ -2,8 +2,7 @@
 var gulp  = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    autoprefixer = require('gulp-autoprefixer'), 
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     uglify = require('gulp-uglify'),
@@ -12,6 +11,7 @@ var gulp  = require('gulp'),
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
     bower = require('gulp-bower');
+    minifycss = require('gulp-minify-css'),  //installed manually
     imageop = require('gulp-image-optimization'); //installed manually
     argv = require('yargs').argv; //installed manually
 

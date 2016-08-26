@@ -6087,7 +6087,11 @@ a, a:visited {
 
 #main a {
   border-bottom: .125em dotted;
-  border-bottom-color: rgba(0, 0, 0, 0.2); }
+  border-bottom-color: rgba(0, 0, 0, 0.1); }
+  #main a:hover, #main a:focus {
+    color: #2C2C33;
+    border-bottom-color: #8a2a2b;
+    border-bottom-style: solid; }
 
 /*********************
 H1, H2, H3, H4, H5 P STYLES
@@ -6179,8 +6183,8 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .top-bar {
-  background-color: none;
-  background-image: url("../images/hdr-10.jpg");
+  background-color: black !important;
+  /*background-image: url('../images/hdr-10.jpg');*/
   background-position: top; }
   .top-bar .title-area {
     z-index: 1; }
@@ -6207,23 +6211,6 @@ NAVIGATION STYLES
     border-bottom: 0px; }
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
-
-.sidebar {
-  background: #E5E2E0;
-  padding: 20px 20px 1px 20px; }
-  @media screen and (min-width: 32em) {
-    .sidebar {
-      margin-bottom: 25px; } }
-  .sidebar h5 {
-    padding-left: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #e5e2e0; }
-    .sidebar h5 a {
-      color: #fff; }
-  .sidebar h6 {
-    margin-bottom: 7px;
-    color: #000; }
 
 #sidebar_header {
   padding: 12px 15px 10px 0;
@@ -6366,7 +6353,7 @@ a.off-canvas-submenu-call {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.news-feed {
+.news-feed, .events-feed {
   background: #d9c89e;
   background: rgba(217, 200, 158, 0.5);
   padding: 10px; }
@@ -6585,16 +6572,44 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  padding: 0px 20px 1px 20px; }
+  @media screen and (min-width: 32em) {
+    .sidebar {
+      margin-bottom: 25px; } }
+  .sidebar h5 {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #e5e2e0; }
+    .sidebar h5 a {
+      color: #fff; }
+  .sidebar h6 {
+    margin-bottom: 7px;
+    color: #000; }
+
 .widgettitle {
   color: #8a2a2b; }
 
-.textwidget {
-  padding: 10px; }
+.widget {
+  background: #E5E2E0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 25px; }
+  .widget ul {
+    margin: 0; }
+    .widget ul li {
+      list-style: none; }
 
-.widget ul {
-  margin: 0; }
-  .widget ul li {
-    list-style: none; }
+.textwidget {
+  padding: 10px;
+  line-height: 1.4;
+  font-size: 16px; }
+  .textwidget ul {
+    margin-left: 1.25rem; }
+    .textwidget ul li {
+      list-style: inherit;
+      line-height: 1.4; }
 
 /*********************
 FOOTER STYLES

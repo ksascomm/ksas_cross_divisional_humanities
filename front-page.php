@@ -16,41 +16,59 @@
 			</div> <!-- end #main -->
 
 			<div class="small-12 large-8 columns">
+				<div class="events-feed">
+				   <h3>Events</h3>
+				   		<?php  //Events Query		
+							$events_query = new WP_Query(array(
+								'post_type' => 'post',
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'category',
+										'field' => 'slug',
+										'terms' => array( 'news' ),
+										'operator' => 'NOT IN'
+									)
+								)
+							)); 
+							if ( $events_query->have_posts() ) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
+							
+								<?php get_template_part( 'parts/loop', 'events' ); ?>
+							<?php endwhile; endif; ?>
+				</div>
+				<br>
 				<div class="news-feed">
-				   <h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
+				   <h3>News & Announcements</h3>
 				   		<?php  //News Query		
-							$news_query_cond = $theme_option['flagship_sub_news_query_cond'];
-							$news_quantity = $theme_option['flagship_sub_news_quantity']; 
-								if ($news_query_cond === 1) {
-									$news_query = new WP_Query(array(
-										'post_type' => 'post',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'category',
-												'field' => 'slug',
-												'terms' => array( 'books' ),
-												'operator' => 'NOT IN'
-											)
-										),
-										'posts_per_page' => $news_quantity)); 
-								} else {
-									$news_query = new WP_Query(array(
-										'post_type' => 'post',
-										'posts_per_page' => $news_quantity)); 
-								}
+								$news_query = new WP_Query(array(
+									'post_type' => 'post',
+									'tax_query' => array(
+										array(
+											'taxonomy' => 'category',
+											'field' => 'slug',
+											'terms' => array( 'events' ),
+											'operator' => 'NOT IN'
+										)
+									) 
+								)); 
+	
 	
 							if ( $news_query->have_posts() ) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 							
 								<?php get_template_part( 'parts/loop', 'news' ); ?>
 								
 							<?php endwhile; endif; ?>
+					<div class="row padding-10">
+						<h5>
+							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">News & Announcements Archive
+							</a>
+						</h5>
+					</div>			
 				</div>
-				<div class="row padding-10">
-					
-						<h5 class="black"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</a></h5>
-					
-				</div>
-					
+				
+
+
+
+
 			</div>
 		 	<aside class="small-12 large-4 columns hide-for-print" role="complementary"> 
 				<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>

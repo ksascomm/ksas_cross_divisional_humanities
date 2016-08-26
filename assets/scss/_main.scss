@@ -132,8 +132,13 @@ a, a:visited {
 }
 
 #main a {
-    border-bottom: .125em dotted;
-    border-bottom-color: rgba(0,0,0,0.2);
+	border-bottom: .125em dotted;
+	border-bottom-color: rgba(0,0,0,.1);
+		&:hover, &:focus {
+			color: $black;
+			border-bottom-color: $primary-color;
+			border-bottom-style: solid;
+		}
 }
 
 /*********************
@@ -282,8 +287,8 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .top-bar {
-	background-color: none;
-	background-image: url('../images/hdr-10.jpg');
+	background-color: black!important;
+	/*background-image: url('../images/hdr-10.jpg');*/
     background-position: top;
 	.title-area {
 		z-index: 1;
@@ -325,27 +330,6 @@ NAVIGATION STYLES
 			margin-left: 20px;
 		}
 	}
-}
-
-.sidebar {
-	background: #E5E2E0;
-	padding: 20px 20px 1px 20px;
-		@include breakpoint (medium) {
-			margin-bottom: 25px;	
-		}
-		h5 {
-			padding-left:20px;
-			margin-top:0;
-			margin-bottom:0;
-			color: #e5e2e0;
-			 a {
-			 	color: #fff;
-			 }
-		}
-		h6 {
-			margin-bottom:7px;
-			color:#000;
-		}
 }
 
 #sidebar_header {
@@ -526,7 +510,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 
-.news-feed {
+.news-feed, .events-feed {
   background: #d9c89e;
   background: rgba(217, 200, 158, 0.5); 
   padding: 10px;
@@ -930,6 +914,23 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
+	padding: 0px 20px 1px 20px;
+		@include breakpoint (medium) {
+			margin-bottom: 25px;	
+		}
+		h5 {
+			padding-left:20px;
+			margin-top:0;
+			margin-bottom:0;
+			color: #e5e2e0;
+			 a {
+			 	color: #fff;
+			 }
+		}
+		h6 {
+			margin-bottom:7px;
+			color:#000;
+		}
 }
 
 #searchsubmit {
@@ -939,11 +940,11 @@ SIDEBARS & ASIDES
 	color: $primary-color;
 }
 
-.textwidget {
-	padding: 10px;
-}
-
 .widget {
+	background: #E5E2E0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 25px;
 	ul {
 		margin: 0;
 
@@ -959,6 +960,19 @@ SIDEBARS & ASIDES
 			// deep nesting  
 			ul {}
 
+		}
+	}
+}
+
+.textwidget {
+	padding: 10px;
+	line-height: 1.4;
+	font-size: 16px;
+	ul {
+		margin-left: 1.25rem;
+		li {
+			list-style: inherit;
+			line-height: 1.4;
 		}
 	}
 }
