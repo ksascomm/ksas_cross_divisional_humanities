@@ -9,7 +9,22 @@
 		    	<header>
 		    		<h1 class="page-title">News & Announcements <?php the_archive_title();?></h1>
 		    	</header>
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+
+				<?php $news_archive_query = new WP_Query(array(
+						'post_type' => 'post',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'category',
+								'field' => 'slug',
+								'terms' => array( 'events' ),
+								'operator' => 'NOT IN'
+							)
+						),
+						'posts_per_page' => 10,));
+			
+
+			     if ($news_archive_query->have_posts()) : while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
 					<?php get_template_part( 'parts/loop', 'archive' ); ?>
