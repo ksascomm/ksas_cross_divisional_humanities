@@ -120,10 +120,6 @@ ul.nav {
 LINK STYLES
 *********************/
 a, a:visited {
-	color: $primary-color;
-	&:hover, &:focus {
-		color: #cba052;
-	}
 	// Mobile tap color
 	&:link {
 		//Highlight links on iOS, Similar to :hover for mobile devices.
@@ -131,7 +127,7 @@ a, a:visited {
 	}
 }
 
-#main a {
+#inner-content a {
 	border-bottom: .125em dotted;
 	border-bottom-color: rgba(0,0,0,.1);
 		&:hover, &:focus {
@@ -145,7 +141,7 @@ a, a:visited {
 .breadcrumbs li {
 	font-size: 14px;
 	 a {
-	 	color: #666;
+	 	color: $primary-color;
 	 	&:hover, &:focus {
 			border: none !important;
 		}

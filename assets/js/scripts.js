@@ -7,10 +7,12 @@ jQuery(document).foundation();
 var $j = jQuery.noConflict();
 $j(".backstretch-banner-home").backstretch([ 
     "https://dl.dropboxusercontent.com/u/59842824/hdr-10.jpg", 
-	"https://dl.dropboxusercontent.com/u/59842824/hdr-11.jpg",
+    "https://dl.dropboxusercontent.com/u/59842824/hdr-11.jpg",
+    "https://dl.dropboxusercontent.com/u/59842824/hdr-12.jpg",
     "https://dl.dropboxusercontent.com/u/59842824/hdr-13-campus-students.jpg", 
-	"https://dl.dropboxusercontent.com/u/59842824/hdr-12.jpg",
-    "https://dl.dropboxusercontent.com/u/59842824/hdr-map.jpg",
+    "https://dl.dropboxusercontent.com/u/59842824/hdr-13-map.jpg",
+    "https://dl.dropboxusercontent.com/u/59842824/hdr-14-campus-students.jpg",
+    "https://dl.dropboxusercontent.com/u/59842824/hdr-15-egypt-columns.jpg"
     ], {fade: 750, duration: 4000});
 
 
@@ -22,8 +24,9 @@ $u(document).ready(function () { // Backstretch
     images[1] = "https://dl.dropboxusercontent.com/u/59842824/hdr-11.jpg";
     images[2] = "https://dl.dropboxusercontent.com/u/59842824/hdr-12.jpg";
     images[3] = "https://dl.dropboxusercontent.com/u/59842824/hdr-13-campus-students.jpg";
-    images[4] = "https://dl.dropboxusercontent.com/u/59842824/hdr-14-campus-students.jpg";
-    images[5] = "https://dl.dropboxusercontent.com/u/59842824/hdr-15-egypt-columns.jpg";
+    images[4] = "https://dl.dropboxusercontent.com/u/59842824/hdr-13-map.jpg";
+    images[5] = "https://dl.dropboxusercontent.com/u/59842824/hdr-14-campus-students.jpg";
+    images[6] = "https://dl.dropboxusercontent.com/u/59842824/hdr-15-egypt-columns.jpg";
 
 
     Array.prototype.shuffle = function () {

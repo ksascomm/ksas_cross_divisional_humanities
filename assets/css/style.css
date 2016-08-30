@@ -6078,17 +6078,13 @@ ul.nav {
 /*********************
 LINK STYLES
 *********************/
-a, a:visited {
-  color: #8a2a2b; }
-  a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #cba052; }
-  a:link, a:visited:link {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+a:link, a:visited:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-#main a {
+#inner-content a {
   border-bottom: .125em dotted;
   border-bottom-color: rgba(0, 0, 0, 0.1); }
-  #main a:hover, #main a:focus {
+  #inner-content a:hover, #inner-content a:focus {
     color: #2C2C33;
     border-bottom-color: #8a2a2b;
     border-bottom-style: solid; }
@@ -6096,7 +6092,7 @@ a, a:visited {
 .breadcrumbs li {
   font-size: 14px; }
   .breadcrumbs li a {
-    color: #666; }
+    color: #8a2a2b; }
     .breadcrumbs li a:hover, .breadcrumbs li a:focus {
       border: none !important; }
 
