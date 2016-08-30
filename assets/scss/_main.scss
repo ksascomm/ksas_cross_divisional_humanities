@@ -141,12 +141,15 @@ a, a:visited {
 		}
 }
 
-#breadcrumbs {
-	margin-bottom: 16px;
-}
 
-li.separator {
-    padding-right: 15px;
+.breadcrumbs li {
+	font-size: 14px;
+	 a {
+	 	color: #666;
+	 	&:hover, &:focus {
+			border: none !important;
+		}
+	 }
 }
 
 /*********************

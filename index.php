@@ -4,8 +4,11 @@
 	
 		<div id="inner-content" class="row">
 	
-		     <main id="main" class="small-12 large-8 large-push-4 columns" role="main">
-		    
+		     <main id="main" class="small-12 large-8 large-push-2 columns" role="main">
+		     	<?php the_breadcrumb(); ?>
+		    	<header>
+		    		<h1 class="page-title">News & Announcements <?php the_archive_title();?></h1>
+		    	</header>
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
@@ -23,8 +26,7 @@
 																								
 		    </main> <!-- end #main -->
 		    
-			<div class="small-12 large-4 large-pull-8 columns hide-for-print" role="navigation"> 
-				<?php get_template_part( 'parts/nav', 'breadcrumbs' ); ?>
+			<div class="small-12 large-2 large-pull-8 columns hide-for-print" role="navigation"> 
 				<?php get_sidebar(); ?>
 			</div>
 
