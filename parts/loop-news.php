@@ -1,5 +1,4 @@
 <section class="news" role="article">
-	<h4><?php echo $theme_option['flagship_sub_feed_name']; ?></h4>
 		<div class="row">		
 			<article class="small-12 columns">
 				<h6><?php the_date(); ?></h6>

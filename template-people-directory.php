@@ -29,23 +29,23 @@
 
 <div id="content">
 <div id="inner-content" class="row">
-   <main id="main" class="small-12 medium-12 columns" role="main">
+   <main id="main" class="small-12 large-8 large-push-2 columns" role="main">
+   	  <?php the_breadcrumb(); ?>	
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div class="row">
-         <div class="large-9 large-offset-1 columns">
+         <div class="large-12 columns">
             <?php get_template_part( 'parts/loop', 'page' ); ?>
          </div>
       </div>
       <?php endwhile; endif; ?>
     <section class="row" id="fields_container">
-		<ul class="small-12 large-8 large-offset-1 columns" id="directory">
+		<ul id="directory">
 		<?php foreach($roles as $role) {
 			$role_slug = $role->slug;
 			$role_name = $role->name;
 				$people_query = new WP_Query(array(
 						'post_type' => 'people',
 						'role' => $role_slug,
-						'filter' => $program_slug,
 						'meta_key' => 'ecpt_people_alpha',
 						'orderby' => 'meta_value',
 						'order' => 'ASC',
