@@ -59,10 +59,16 @@
 						<div class="small-12 columns">
 						
 							<?php if ( has_post_thumbnail()) { ?> 
-								<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('directory'); ?></a>
+								<?php the_post_thumbnail('directory'); ?>
 							<?php } ?>			    
 							<h4 class="no-margin">
-								<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+								<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>
+									<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" title="<?php the_title(); ?>">
+										<?php the_title(); ?>
+									</a>
+								<?php else : ?>
+									<?php the_title(); ?>
+								<?php endif; ?>	
 							</h4>
 							<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
 								<h5 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5>
