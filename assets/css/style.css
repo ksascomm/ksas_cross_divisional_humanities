@@ -6093,6 +6093,12 @@ a, a:visited {
     border-bottom-color: #8a2a2b;
     border-bottom-style: solid; }
 
+#breadcrumbs {
+  margin-bottom: 16px; }
+
+li.separator {
+  padding-right: 15px; }
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
