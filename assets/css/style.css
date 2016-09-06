@@ -6353,6 +6353,9 @@ a.off-canvas-submenu-call {
 #pattern {
   background: #000; }
 
+.dropdown.menu .submenu {
+  background: #8a2a2b; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
