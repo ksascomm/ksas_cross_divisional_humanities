@@ -1179,24 +1179,24 @@ footer.timely.ai1ec-event-footer {
 .ai1ec-agenda-widget-view {
   .ai1ec-event {
     .ai1ec-event-time, > a {
-      color: $black;
+      color: $black !important;
     }
   }
   .ai1ec-month {
-    background: $primary-color;
+    background: $primary-color !important;
   }
 }
 
 .ai1ec-agenda-view .ai1ec-month {
-  background: $primary-color;
+  background: $primary-color !important;
 }
 
 .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
-  color: $primary-color;
+  color: $primary-color !important;
 }
 
 .entry-content .timely a:hover, .comment-content .timely a:hover, .site-footer .widget .timely a:hover, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited, .ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
-  color: $black;
+  color: $black !important;
 }
 
 #calendar_section {
