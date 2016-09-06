@@ -1150,6 +1150,59 @@ li.person {
   }
 }
 
+footer.timely.ai1ec-event-footer {
+    background: inherit;
+}
+
+.timely p {
+  font-size: 16px;
+  font-family: $font-stack !important;
+}
+
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
+  font-family: $font-subhead !important;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today,{
+  background: none !important;
+}
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none !important;
+  background: none !important;
+}
+
+.timely {
+  font-family: inherit !important;
+}
+
+.ai1ec-agenda-widget-view {
+  .ai1ec-event {
+    .ai1ec-event-time, > a {
+      color: $black;
+    }
+  }
+  .ai1ec-month {
+    background: $primary-color;
+  }
+}
+
+.ai1ec-agenda-view .ai1ec-month {
+  background: $primary-color;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+  color: $primary-color;
+}
+
+.entry-content .timely a:hover, .comment-content .timely a:hover, .site-footer .widget .timely a:hover, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited, .ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
+  color: $black;
+}
+
+#calendar_section {
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 64em) {
     .header h1 {
         font-size: 3rem;
