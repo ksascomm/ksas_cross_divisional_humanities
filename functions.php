@@ -30,6 +30,9 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 // Adds breadcrumbs
 require_once(get_template_directory().'/assets/functions/breadcrumbs.php'); 
 
+// Adds page metabox
+require_once(get_template_directory().'/assets/functions/page-metabox.php');
+
 // Adds site styles to the WordPress editor
 //require_once(get_template_directory().'/assets/functions/editor-styles.php'); 
 

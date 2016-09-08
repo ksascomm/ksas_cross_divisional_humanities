@@ -1,5 +1,5 @@
 <!-- Begin Sidebar -->
-<div class="sidebar">
+<div class="sidebar-nav">
 	<!-- Start Navigation for Sibling Pages -->	
 			<?php 
 				wp_reset_query();
