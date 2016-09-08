@@ -7,11 +7,11 @@
                 <div class="column">
                   <h1>Academics</h1>
                     <ul class="no-bullet" role="menu">
-                      <li role="menuitem"><a href="/academics/departments-programs-and-centers/">Departments, Programs, and Centers</a></li>
-                      <li role="menuitem"><a href="/about/faculty/">Faculty Directory</a></li>
+                      <li role="menuitem"><a href="http://krieger.jhu.edu/academics/departments-programs-and-centers/">Departments, Programs, and Centers</a></li>
+                      <li role="menuitem"><a href="http://krieger.jhu.edu/about/faculty/">Faculty Directory</a></li>
                       <li role="menuitem"><a href="http://krieger.jhu.edu/academics/fields/">Fields of Study</a></li>
                       <li role="menuitem"><a href="http://www.library.jhu.edu/">Libraries</a></li>
-                      <li role="menuitem"><a href="krieger.jhu.edu/academics/majors-minors/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Majors & Minors')">Majors & Minors</a>
+                      <li role="menuitem"><a href="http://krieger.jhu.edu/academics/majors-minors/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Majors & Minors')">Majors & Minors</a>
                       <li role="menuitem"><a href="#" class="off-canvas-submenu-call">Other Educational Opportunities<span>+</span></a></li>
                         <ul class="no-bullet off-canvas-submenu"> 
                           <li role="menuitem"><a href="http://advanced.jhu.edu/">Advanced Academic Programs</a></li>
