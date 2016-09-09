@@ -5,7 +5,7 @@
           <div class="row">
             <div class="small-up-4" id="global-links" role="list">
                 <div class="column">
-                  <h1>Academics</h1>
+                  <h2>Academics</h2>
                     <ul class="no-bullet" role="menu">
                       <li role="menuitem"><a href="http://krieger.jhu.edu/academics/departments-programs-and-centers/">Departments, Programs, and Centers</a></li>
                       <li role="menuitem"><a href="http://krieger.jhu.edu/about/faculty/">Faculty Directory</a></li>
@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 <div class="column">
-                  <h1>Student & Faculty Resources</h1>    
+                  <h2>Student & Faculty Resources</h2>    
                     <ul class="no-bullet" role="menu">
                       <li role="menuitem"><a href="https://isis.jhu.edu/sswf/">Course Listings & Registration</a></li>
                       <li role="menuitem"><a href="http://finaid.johnshopkins.edu/">Financial Aid</a></li>
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
                 <div class="column">
-                  <h1>Across Campus</h1>
+                  <h2>Across Campus</h2>
                   <ul class="no-bullet" role="menu">
                     <li role="menuitem"><a href="https://www.jhu.edu/admissions/">Admissions</a></li>
                     <li role="menuitem"><a href="https://www.jhu.edu/">Johns Hopkins University Website</a></li>

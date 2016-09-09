@@ -1,13 +1,19 @@
-<section class="news" role="article">
-		<div class="row">		
-			<article class="small-12 columns">
-				<h6><?php the_date(); ?></h6>
-				<h5><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h5>
-				<?php if ( has_post_thumbnail()) { ?> 
-					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-				<?php } ?>
-				<?php the_excerpt(); ?>
-				<hr>
-			</article>
-		</div>
- </section>	 <!-- end #news -->	
+<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting">
+						
+	<header class="article-header">	
+		<?php get_template_part( 'parts/content', 'byline' ); ?>
+		<h1 class="entry-title single-title" itemprop="headline">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_title();?>
+			</a>
+		</h1>
+    </header> <!-- end article header -->
+					
+    <section class="entry-content" itemprop="articleBody">
+		<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+		<?php the_excerpt(); ?>
+	</section> <!-- end article section -->
+						
+	<hr>							
+													
+</article> <!-- end article -->

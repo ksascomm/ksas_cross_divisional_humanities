@@ -16,8 +16,8 @@
 			</div> <!-- end #main -->
 
 			<div class="small-12 large-8 columns">
-				<div class="events-feed">
-				   <h3>Events</h3>
+				<section class="events-feed">
+				   <h1>Events</h1>
 				   		<?php  //Events Query		
 							$events_query = new WP_Query(array(
 								'post_type' => 'post',
@@ -34,10 +34,10 @@
 							
 								<?php get_template_part( 'parts/loop', 'events' ); ?>
 							<?php endwhile; endif; ?>
-				</div>
+				</section>
 				<br>
-				<div class="news-feed">
-				   <h3>News & Announcements</h3>
+				<section class="news-feed">
+				   <h1>News & Announcements</h1>
 				   		<?php  //News Query		
 								$news_query = new WP_Query(array(
 									'post_type' => 'post',
@@ -58,19 +58,19 @@
 								
 							<?php endwhile; endif; ?>
 					<div class="row padding-10">
-						<h5>
+						<h2>
 							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">News & Announcements Archive
 							</a>
-						</h5>
+						</h2>
 					</div>			
-				</div>
+				</section>
 				
 
 
 
 
 			</div>
-		 	<aside class="small-12 large-4 columns hide-for-print" role="complementary"> 
+		 	<aside class="small-12 large-4 columns hide-for-print"> 
 				<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>
 					<?php get_sidebar(); ?>
 				<?php } ?>

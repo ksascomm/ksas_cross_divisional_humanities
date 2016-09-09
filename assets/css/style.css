@@ -6163,25 +6163,6 @@ HEADER STYLES
 #mobile-nav h1 {
   text-align: center; }
 
-@media only screen and (min-width: 512px) and (max-width: 566px) {
-  .top-bar ul li a {
-    font-size: 13px;
-    padding-right: inherit; } }
-
-@media only screen and (max-width: 767px) {
-  .mobile-logo img {
-    width: 75%; } }
-
-@media only screen and (max-width: 1023px) {
-  #desktop-nav {
-    display: none; }
-  html, body {
-    overflow-x: hidden; } }
-
-@media only screen and (min-width: 1023px) {
-  #mobile-nav {
-    display: none; } }
-
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -6307,9 +6288,9 @@ a.off-canvas-submenu-call {
   position: absolute;
   padding: 1em 1em 2.5em;
   display: none; }
-  .o-content h1, .o-content li {
+  .o-content h1, .o-content h2, .o-content li {
     color: #2c2c33 !important; }
-  .o-content h1 {
+  .o-content h1, .o-content h2 {
     font-size: .96rem !important;
     margin-top: inherit; }
 
@@ -6329,12 +6310,8 @@ a.off-canvas-submenu-call {
   top: 0;
   right: 0;
   display: block;
-  font-size: 1em;
+  font-size: .9rem;
   margin-right: 16px; }
-
-@media screen and (max-width: 39.9375em) {
-  .menu > li:not(.menu-text) > a {
-    font-size: 15px; } }
 
 #pattern {
   background: #000; }
@@ -6349,6 +6326,14 @@ POSTS & CONTENT STYLES
   background: #d9c89e;
   background: rgba(217, 200, 158, 0.5);
   padding: 10px; }
+  .news-feed h1, .events-feed h1 {
+    font-size: 1.5rem; }
+    .news-feed h1.entry-title, .events-feed h1.entry-title {
+      font-size: 1.25rem;
+      font-family: "gentona-book", Arial, sans-serif; }
+  .news-feed h2, .events-feed h2 {
+    font-size: 1.25rem;
+    font-family: "gentona-book", Arial, sans-serif; }
 
 .intro p {
   margin-bottom: 22px;
@@ -6371,7 +6356,8 @@ POSTS & CONTENT STYLES
   padding: 0px; }
 
 .byline {
-  color: #999; }
+  color: #2C2C33;
+  margin-bottom: 0; }
 
 .entry-content img {
   max-width: 100%;
@@ -6587,14 +6573,15 @@ SIDEBARS & ASIDES
   @media screen and (min-width: 32em) {
     .sidebar-nav, .ecpt-page-sidebar {
       margin-bottom: 25px; } }
-  .sidebar-nav h5, .ecpt-page-sidebar h5 {
+  .sidebar-nav h4, .ecpt-page-sidebar h4 {
+    font-size: 1.25rem;
     padding-left: 20px;
     margin-top: 0;
     margin-bottom: 0;
     color: #e5e2e0; }
-    .sidebar-nav h5 a, .ecpt-page-sidebar h5 a {
+    .sidebar-nav h4 a, .ecpt-page-sidebar h4 a {
       color: #fff; }
-  .sidebar-nav h6, .ecpt-page-sidebar h6 {
+  .sidebar-nav h5, .ecpt-page-sidebar h5 {
     margin-bottom: 7px;
     color: #000; }
   .sidebar-nav p, .ecpt-page-sidebar p {
@@ -6815,13 +6802,6 @@ footer.timely.ai1ec-event-footer {
 #calendar_section {
   margin-bottom: 10px; }
 
-@media screen and (min-width: 64em) {
-  .header h1 {
-    font-size: 3rem; }
-  /*line 6345 in styles.css */
-  #mobile-nav {
-    background: transparent; } }
-
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet
@@ -6861,6 +6841,36 @@ it would be 48px x 48px. You'd name it the same, but with a @2x at the end
 the original dimensions and you are good to go. 
 
 */ }
+
+@media only screen and (min-width: 512px) and (max-width: 566px) {
+  .top-bar ul li a {
+    font-size: 13px;
+    padding-right: inherit; } }
+
+@media only screen and (max-width: 767px) {
+  .mobile-logo img {
+    width: 75%; } }
+
+@media only screen and (max-width: 1023px) {
+  #desktop-nav {
+    display: none; }
+  html, body {
+    overflow-x: hidden; } }
+
+@media only screen and (min-width: 1023px) {
+  #mobile-nav {
+    display: none; } }
+
+@media screen and (max-width: 39.9375em) {
+  .menu > li:not(.menu-text) > a {
+    font-size: 15px; } }
+
+@media screen and (min-width: 64em) {
+  .header h1 {
+    font-size: 3rem; }
+  /*line 6345 in styles.css */
+  #mobile-nav {
+    background: transparent; } }
 
 /******************************************************************
 

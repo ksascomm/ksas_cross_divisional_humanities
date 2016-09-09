@@ -42,3 +42,51 @@ the original dimensions and you are good to go.
 */
 
 }
+
+@media only screen and (min-width: 512px) and (max-width: 566px) {
+	.top-bar ul li a {	
+			font-size: 13px;
+			padding-right: inherit;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-logo {
+    img {
+      width: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+    #desktop-nav {
+    display: none;
+  }
+    html, body {
+    overflow-x: hidden;
+  }
+}
+
+
+@media only screen and (min-width: 1023px) {
+    #mobile-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+	.menu > li:not(.menu-text) > a {
+	    font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 64em) {
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    /*line 6345 in styles.css */
+    #mobile-nav {
+        background: transparent;
+    }
+}

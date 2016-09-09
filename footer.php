@@ -1,4 +1,4 @@
-					<footer class="footer" role="contentinfo">
+					<footer class="footer">
 						<div id="inner-footer" class="row">
 						<!-- Copyright and Address -->
 								<div class="row" id="copyright" role="contentinfo">

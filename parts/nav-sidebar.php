@@ -15,7 +15,7 @@
 				     //If there are no ancestors display a menu of children
 								?>						
 							<div class="offset-gutter" id="sidebar_header">
-								<h5 class="grey">Also in <a href="<?php echo $ancestor_url;?>" class="white bold"><?php echo $ancestor_title; ?></a></h5>
+								<h4 class="grey">Also in <a href="<?php echo $ancestor_url;?>" class="white bold"><?php echo $ancestor_title; ?></a></h4>
 							</div>
 							<?php 
 								wp_nav_menu( array( 
