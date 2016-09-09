@@ -11,7 +11,7 @@
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
-		
+
 		<title><?php create_page_title(); ?></title>
 
 		<!-- If Site Icon isn't set in customizer -->
@@ -38,9 +38,7 @@
 			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
-
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+	    
 		<?php wp_head(); ?>
 
 		<!-- Drop Google Analytics here -->
