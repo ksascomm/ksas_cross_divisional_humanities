@@ -61,7 +61,7 @@
 							<?php if ( has_post_thumbnail()) { ?> 
 								<?php the_post_thumbnail('directory'); ?>
 							<?php } ?>			    
-							<h4 class="no-margin">
+							<h3 class="no-margin">
 								<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>
 									<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" title="<?php the_title(); ?>">
 										<?php the_title(); ?>
@@ -69,9 +69,9 @@
 								<?php else : ?>
 									<?php the_title(); ?>
 								<?php endif; ?>	
-							</h4>
+							</h3>
 							<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
-								<h5 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5>
+								<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h4>
 							<?php endif; ?>
 						<p class="contact black">
 							<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?><span class="fa fa-phone-square" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?><br><?php endif; ?>
