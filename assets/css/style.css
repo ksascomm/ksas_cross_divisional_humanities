@@ -6114,6 +6114,14 @@ h3, .h3 {
 /*********************
 HEADER STYLES
 *********************/
+.menu > li:not(.menu-text) > a {
+  border-bottom: .125em dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.1); }
+  .menu > li:not(.menu-text) > a:hover, .menu > li:not(.menu-text) > a:focus {
+    color: #2C2C33;
+    border-bottom-color: #8a2a2b;
+    border-bottom-style: solid; }
+
 .header ul.off-canvas-list li {
   list-style: none; }
 

@@ -192,6 +192,17 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+
+.menu > li:not(.menu-text) > a {
+	border-bottom: .125em dotted;
+	border-bottom-color: rgba(0,0,0,.1);
+		&:hover, &:focus {
+			color: $black;
+			border-bottom-color: $primary-color;
+			border-bottom-style: solid;
+		}	
+}
+
 .header {
 	ul.off-canvas-list li {
 		list-style: none;
