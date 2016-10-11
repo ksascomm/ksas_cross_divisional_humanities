@@ -6,9 +6,9 @@
 	<?php endif; ?>
 	</header> <!-- end article header -->
 					
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content" itemprop="articleBody">
 	    <?php the_content(); ?>
 	    <?php wp_link_pages(); ?>
-	</section> <!-- end article section -->
+	</div> <!-- end article section -->
 					
 </article> <!-- end article -->

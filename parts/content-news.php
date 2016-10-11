@@ -1,4 +1,4 @@
-<section class="news">
+<div class="news">
  
 		<h4><?php echo $theme_option['flagship_sub_feed_name']; ?></h4>
 		<div class="row">		
@@ -20,4 +20,4 @@
 			<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><h5 class="black">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h5></a>
 		</div>
 	
- </section>	
+ </div>	

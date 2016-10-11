@@ -5,10 +5,10 @@
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>
     </header> <!-- end article header -->
 					
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content" itemprop="articleBody">
 		<?php the_post_thumbnail('full'); ?>
 		<?php the_content(); ?>
-	</section> <!-- end article section -->
+	</div> <!-- end article section -->
 						
 								
 													

@@ -4,10 +4,10 @@
 		<?php //get_template_part( 'parts/content', 'byline' ); ?>
 	</header> <!-- end article header -->
 					
-	<section class="entry-content" itemprop="articleBody">
+	<div class="entry-content" itemprop="articleBody">
 		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
 		<?php the_content('<button class="tiny">Read more...</button>'); ?>
-	</section> <!-- end article section -->
+	</div> <!-- end article section -->
 						
 	<footer class="article-footer">
     	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>

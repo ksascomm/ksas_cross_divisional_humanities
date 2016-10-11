@@ -16,7 +16,7 @@
 			</div> <!-- end #main -->
 
 			<div class="small-12 large-8 columns">
-				<section class="events-feed">
+				<div class="events-feed">
 				   <h1>Events</h1>
 				   		<?php  //Events Query		
 							$events_query = new WP_Query(array(
@@ -34,9 +34,11 @@
 							
 								<?php get_template_part( 'parts/loop', 'events' ); ?>
 							<?php endwhile; endif; ?>
-				</section>
+				</div>
+
 				<br>
-				<section class="news-feed">
+
+				<div class="news-feed">
 				   <h1>News & Announcements</h1>
 				   		<?php  //News Query		
 								$news_query = new WP_Query(array(
@@ -63,11 +65,7 @@
 							</a>
 						</h2>
 					</div>			
-				</section>
-				
-
-
-
+				</div>
 
 			</div>
 		 	<aside class="small-12 large-4 columns hide-for-print"> 

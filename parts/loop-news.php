@@ -9,10 +9,10 @@
 		</h1>
     </header> <!-- end article header -->
 					
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content" itemprop="articleBody">
 		<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
 		<?php the_excerpt(); ?>
-	</section> <!-- end article section -->
+	</div> <!-- end article section -->
 						
 	<hr>							
 													
