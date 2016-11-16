@@ -6024,10 +6024,10 @@ ul.nav {
   list-style: none; }
   ul.nav li {
     padding: 10px 0 8px 0px;
-    font-size: 1.1rem; }
+    font-size: 1rem; }
     ul.nav li ul li {
       border-top: none;
-      font-size: 1rem;
+      font-size: .9rem;
       padding: 5px 0 0px 5px;
       text-indent: -15px;
       margin-left: 15px; }
@@ -6106,22 +6106,14 @@ h3, .h3 {
   font-size: 1.75rem; }
 
 .page-title, .entry-title.single-title {
-  font-size: 2.35rem; }
+  font-size: 2rem; }
 
 .article-header h2 {
-  font-size: 2rem; }
+  font-size: 1.75rem; }
 
 /*********************
 HEADER STYLES
 *********************/
-#off-canvas .menu > li:not(.menu-text) > a {
-  border-bottom: .125em dotted;
-  border-bottom-color: rgba(0, 0, 0, 0.1); }
-  #off-canvas .menu > li:not(.menu-text) > a:hover, #off-canvas .menu > li:not(.menu-text) > a:focus {
-    color: #2C2C33;
-    border-bottom-color: #8a2a2b;
-    border-bottom-style: solid; }
-
 .header ul.off-canvas-list li {
   list-style: none; }
 
@@ -6863,7 +6855,7 @@ the original dimensions and you are good to go.
 
 @media only screen and (max-width: 767px) {
   .mobile-logo img {
-    width: 75%; } }
+    width: 55%; } }
 
 @media only screen and (max-width: 1023px) {
   #desktop-nav {
