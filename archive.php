@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="row">
 		
-		    <main id="main" class="small-12 large-8 large-push-4 columns" role="main">
+		    <main id="main" class="small-12 large-8 large-push-2 columns" role="main">
 			    
 		    	<header>
 		    		<h1 class="page-title"><?php the_archive_title();?></h1>
