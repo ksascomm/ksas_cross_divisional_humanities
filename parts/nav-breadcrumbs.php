@@ -11,7 +11,11 @@
 			<ul id="menu-main-menu-2" class="breadcrumbs">
 				<li><a href="<?php echo $home_url; ?>">Home</a></li>
 				<li><a href="<?php echo $home_url; ?>/about">About</a></li>
-				<li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
+				<?php if (has_category ('events')) : ?>
+					<li><a href="<?php echo $home_url; ?>/category/events/">Upcoming Events</a></li>
+				<?php else : ?>
+					<li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
+				<?php endif;?>
 				<li><a href="<?php echo get_permalink(); ?>"><?php echo $article_title; ?></a></li>
 			</ul>
 			</nav>	<?php } 

@@ -16,29 +16,44 @@
 			</div> <!-- end #main -->
 
 			<div class="small-12 large-8 columns">
-				<div class="events-feed">
+				
+				<?php //Events Query	 
+				 $events_query = new WP_Query(array(
+					'post_type' => 'post',
+					'orderby' => 'date',
+					'order' => 'asc',
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'category',
+							'field' => 'slug',
+							'terms' => array( 'news' ),
+							'operator' => 'NOT IN'
+						)
+					)
+				)); 
+				if ( $events_query->have_posts() ) : ?>
+
+				<section class="events-feed">
 				   <h1>Events</h1>
-				   		<?php  //Events Query		
-							$events_query = new WP_Query(array(
-								'post_type' => 'post',
-								'tax_query' => array(
-									array(
-										'taxonomy' => 'category',
-										'field' => 'slug',
-										'terms' => array( 'news' ),
-										'operator' => 'NOT IN'
-									)
-								)
-							)); 
-							if ( $events_query->have_posts() ) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
+				   	 <?php while ($events_query->have_posts()) : $events_query->the_post(); ?>
 							
-								<?php get_template_part( 'parts/loop', 'events' ); ?>
-							<?php endwhile; endif; ?>
-				</div>
+						<?php get_template_part( 'parts/loop', 'events' ); ?>
+						
+					<?php endwhile; ?>
+
+					<div class="row padding-10">
+						<h2>
+							<a href="<?php echo site_url();?>/category/events/">Upcoming Events
+							</a>
+						</h2>
+					</div>		
+				</section>
 
 				<br>
 
-				<div class="news-feed">
+				<?php endif; ?>
+				
+				<section class="news-feed">
 				   <h1>News & Announcements</h1>
 				   		<?php  //News Query		
 								$news_query = new WP_Query(array(
@@ -65,14 +80,16 @@
 							</a>
 						</h2>
 					</div>			
-				</div>
-
+				</section>
 			</div>
+
 		 	<aside class="small-12 large-4 columns hide-for-print"> 
+
 				<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>
 					<?php get_sidebar(); ?>
 				<?php } ?>
 				<?php get_sidebar('homepage'); ?>
+
 			</aside>		
 		</div> <!-- end #inner-content -->
 
