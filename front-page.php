@@ -17,7 +17,7 @@
 
 			<div class="small-12 large-8 columns">
 				
-				<?php //Events Query	 
+			<?php //Events Query	 
 				 $events_query = new WP_Query(array(
 					'post_type' => 'post',
 					'orderby' => 'date',
@@ -32,21 +32,18 @@
 					)
 				)); 
 				if ( $events_query->have_posts() ) : ?>
-
 				<section class="events-feed">
 				   <h1>Events</h1>
 				   	 <?php while ($events_query->have_posts()) : $events_query->the_post(); ?>
 							
-						<?php get_template_part( 'parts/loop', 'events' ); ?>
-						
+					<?php get_template_part( 'parts/loop', 'events' ); ?>
 					<?php endwhile; ?>
-
+			
 					<div class="row padding-10">
 						<h2>
-							<a href="<?php echo site_url();?>/category/events/">Upcoming Events
-							</a>
+							<a href="<?php echo site_url();?>/category/events/">View All Events</a>
 						</h2>
-					</div>		
+					</div>
 				</section>
 
 				<br>
