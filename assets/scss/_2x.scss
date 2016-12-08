@@ -59,17 +59,20 @@ the original dimensions and you are good to go.
 }
 
 @media only screen and (max-width: 1023px) {
-    #desktop-nav {
+  #desktop-nav {
     display: none;
   }
-    html, body {
+  html, body {
     overflow-x: hidden;
   }
+  #sidebar {
+    margin-top: 1rem;
+  }  
 }
 
 
 @media only screen and (min-width: 1023px) {
-    #mobile-nav {
+  #mobile-nav {
     display: none;
   }
 }

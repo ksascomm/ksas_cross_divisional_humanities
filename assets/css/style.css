@@ -4107,7 +4107,6 @@ table.hover tr:nth-of-type(even):hover {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none; }
 
 .fa-stack {
@@ -6337,7 +6336,7 @@ POSTS & CONTENT STYLES
 
 .intro p {
   margin-bottom: 22px;
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 200;
   line-height: 1.4; }
 
@@ -6559,7 +6558,7 @@ SIDEBARS & ASIDES
     padding-left: 20px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #e5e2e0; }
+    color: #E5E2E0; }
     .sidebar h5 a {
       color: #fff; }
   .sidebar h6 {
@@ -6578,7 +6577,7 @@ SIDEBARS & ASIDES
     padding-left: 20px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #e5e2e0; }
+    color: #E5E2E0; }
     .sidebar-nav h4 a, .ecpt-page-sidebar h4 a {
       color: #fff; }
   .sidebar-nav h5, .ecpt-page-sidebar h5 {
@@ -6595,7 +6594,7 @@ SIDEBARS & ASIDES
 
 .sidebar.sidebar-right {
   padding-top: 0;
-  background: #e5e2e0; }
+  background: #E5E2E0; }
 
 .sidebar_bg ul.nav li a, .sidebar li a {
   font-family: 'gentona-book', Arial, sans-serif;
@@ -6777,8 +6776,12 @@ footer.timely.ai1ec-event-footer {
   font-size: 16px;
   font-family: "gentona-light", Arial, sans-serif !important; }
 
-.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details, .ai1ec-event-location {
   font-family: "gentona-book", Arial, sans-serif !important; }
+
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-time {
+  opacity: 1;
+  font-weight: inherit; }
 
 .ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today {
   background: none !important; }
@@ -6807,6 +6810,30 @@ footer.timely.ai1ec-event-footer {
 
 #calendar_section {
   margin-bottom: 10px; }
+
+.events-feed .ai1ec-time, .events-feed .ai1ec-location {
+  font-size: 1rem; }
+
+.events-feed .ai1ec-agenda-view .ai1ec-date {
+  background: none; }
+
+.events-feed .ai1ec-agenda-view .ai1ec-event {
+  border: none; }
+
+.events-feed .ai1ec-pagination, .events-feed .ai1ec-subscribe-container, .events-feed .ai1ec-clearfix, .events-feed .ai1ec-title-buttons.ai1ec-btn-toolbar, .events-feed .ai1ec-calendar-toolbar, .events-feed span.ai1ec-categories {
+  display: none; }
+
+.events-feed .ai1ec-event-time, .events-feed .ai1ec-event-location {
+  font-size: 1rem !important; }
+
+.events-feed .ai1ec-event-title {
+  font-size: 1.25rem !important; }
+
+.events-feed .timely .ai1ec-btn-default {
+  background: #8a2a2b;
+  color: #fff; }
+  .events-feed .timely .ai1ec-btn-default:hover {
+    border-bottom-color: #adadad !important; }
 
 /******************************************************************
 
@@ -6861,7 +6888,9 @@ the original dimensions and you are good to go.
   #desktop-nav {
     display: none; }
   html, body {
-    overflow-x: hidden; } }
+    overflow-x: hidden; }
+  #sidebar {
+    margin-top: 1rem; } }
 
 @media only screen and (min-width: 1023px) {
   #mobile-nav {
@@ -6894,7 +6923,6 @@ to display none.
     background: transparent !important;
     color: black !important;
     text-shadow: none !important;
-    -webkit-filter: none !important;
     filter: none !important;
     -ms-filter: none !important; }
   a, a:visited {

@@ -172,7 +172,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	
+
 }
 
 h5, .h5 {
@@ -208,7 +208,7 @@ HEADER STYLES
 	 img.centered {
 	 	 display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto
 	 }
 	 h1 {
     	@include breakpoint(medium) {
@@ -258,7 +258,7 @@ HEADER STYLES
    	text-align: center;
    }
 }
-    
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -270,7 +270,7 @@ NAVIGATION STYLES
 		z-index: 1;
 	}
 	ul {
-		float:right;	
+		float:right;
 		font-weight: 600;
 		background-color: transparent;
 		li {
@@ -469,7 +469,7 @@ POSTS & CONTENT STYLES
 
 .news-feed, .events-feed {
   background: #d9c89e;
-  background: rgba(217, 200, 158, 0.5); 
+  background: rgba(217, 200, 158, 0.5);
   padding: 10px;
   	h1 {
 	  font-size: 1.5rem;
@@ -486,7 +486,7 @@ POSTS & CONTENT STYLES
 
 .intro p {
     margin-bottom: 22px;
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: 200;
     line-height: 1.4;
 }
@@ -498,7 +498,7 @@ POSTS & CONTENT STYLES
 }
 
 .hero {
-	background: #E5E2E0;
+	background: $gray;
 }
 
 #caption {
@@ -509,15 +509,15 @@ POSTS & CONTENT STYLES
 
 .single-title,
 .page-title {
-	
+
 }
 
 .single-title {
-	
+
 }
 
 .page-title {
-	
+
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
 		border: 0px;
@@ -529,38 +529,38 @@ POSTS & CONTENT STYLES
 
 }
 
-// Post meta  
+// Post meta
 .byline {
 	color: $black;
 	margin-bottom: 0;
 	time {}
 }
 
-// Entry content  
+// Entry content
 .entry-content {
-	
+
 	img {
 		max-width: 100%;
 		height: auto;
 	}
 
-	.alignleft, img.alignleft { 
-		margin-right: 1.5em; 
-		display: inline; 
-		float: left; 
+	.alignleft, img.alignleft {
+		margin-right: 1.5em;
+		display: inline;
+		float: left;
 	}
-	.alignright, img.alignright { 
-		margin-left: 1.5em; 
-		display: inline; 
-		float: right; 
+	.alignright, img.alignright {
+		margin-left: 1.5em;
+		display: inline;
+		float: right;
 	}
-	.aligncenter, img.aligncenter { 
-		margin-right: auto; 
-		margin-left: auto; 
-		display: block; 
-		clear: both; 
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
 	}
-			
+
 	video, object {
 		max-width: 100%;
 		height: auto;
@@ -572,14 +572,14 @@ POSTS & CONTENT STYLES
 		padding: 10px;
 		}
 
-} 
+}
 
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
 	padding: 5px;
 
-	// Images inside wp-caption  
+	// Images inside wp-caption
 	img {
 		max-width: 100%;
 		margin-bottom: 0;
@@ -591,7 +591,7 @@ POSTS & CONTENT STYLES
 		margin: 4px 0 7px;
 		text-align: center;
 	}
-} 
+}
 
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
@@ -615,7 +615,7 @@ IMAGE GALLERY STYLES
 
 		dd {}
 
-} 
+}
 
 // Gallery caption styles
 .gallery-caption {}
@@ -668,7 +668,7 @@ COMMENT STYLES
 			.alt {}
 			.odd {}
 			.even {}
-			.depth-1 {}           // Change number for different depth  
+			.depth-1 {}           // Change number for different depth
 			.byuser {}
 			.bypostauthor {}
 			.comment-author-admin {}
@@ -697,7 +697,7 @@ COMMENT STYLES
 	li.depth-4 {}
 	li.depth-5 {}
 
-	// General comment classes  
+	// General comment classes
 	.alt {}
 	.odd {
 	}
@@ -714,7 +714,7 @@ COMMENT STYLES
 	.thread-odd {}
 	.thread-even {}
 
-	// vcard  
+	// vcard
 	.vcard {
 		margin-left: 50px;
 
@@ -751,10 +751,10 @@ COMMENT STYLES
 			background: #fff;
 		}
 
-	} // end .commentlist .vcard  
+	} // end .commentlist .vcard
 
 
-	// comment meta  
+	// comment meta
 	.comment-meta {
 
 		a {}
@@ -767,7 +767,7 @@ COMMENT STYLES
 
 	}
 
-	// comment content  
+	// comment content
 	.comment_content {
 
 		p {
@@ -776,20 +776,20 @@ COMMENT STYLES
 			line-height: 1.5em;
 		}
 
-	} // end .commentlist .comment_content  
+	} // end .commentlist .comment_content
 
-	// comment reply link  
+	// comment reply link
 	.comment-reply-link {
 		float: right;
 
 		&:hover,
 		&:focus {
-		
+
 		}
 
-	} // end .commentlist .comment-reply-link  
+	} // end .commentlist .comment-reply-link
 
-} // end .commentlist  
+} // end .commentlist
 
 /*********************
 COMMENT FORM STYLES
@@ -825,7 +825,7 @@ COMMENT FORM STYLES
 				background: #fff;
 			}
 
-			// form validation  
+			// form validation
 			&:invalid {
 				outline: none;
 				border-color: #fbc2c4;
@@ -853,28 +853,28 @@ COMMENT FORM STYLES
 	}
 }
 
-// comment submit button  
+// comment submit button
 #submit {}
 
-// comment form title  
+// comment form title
 #comment-form-title {
 	margin: 0 0 1.1em;
 }
 
-// cancel comment reply link  
+// cancel comment reply link
 #cancel-comment-reply {
 	a {}
 }
 
-// logged in comments  
+// logged in comments
 .comments-logged-in-as {}
 
-// allowed tags  
+// allowed tags
 #allowed_tags {
 	margin: 1.5em 10px 0.7335em 0;
 }
 
-// No comments  
+// No comments
 .nocomments {
 	margin: 0 20px 1.1em;
 }
@@ -885,13 +885,13 @@ SIDEBARS & ASIDES
 .sidebar {
 	padding: 0px 20px 1px 20px;
 		@include breakpoint (medium) {
-			margin-bottom: 25px;	
+			margin-bottom: 25px;
 		}
 		h5 {
 			padding-left:20px;
 			margin-top:0;
 			margin-bottom:0;
-			color: #e5e2e0;
+			color: $gray;
 			 a {
 			 	color: #fff;
 			 }
@@ -907,14 +907,14 @@ SIDEBARS & ASIDES
   	background: rgba(217, 200, 158, 0.5);
   	padding: 0px 20px 1px 20px;
 		@include breakpoint (medium) {
-			margin-bottom: 25px;	
+			margin-bottom: 25px;
 		}
 		h4 {
 			font-size: 1.25rem;
 			padding-left:20px;
 			margin-top:0;
 			margin-bottom:0;
-			color: #e5e2e0;
+			color: $gray;
 			 a {
 			 	color: #fff;
 			 }
@@ -926,7 +926,7 @@ SIDEBARS & ASIDES
 		p {
 			padding-top: 10px;
 		}
-}  	
+}
 
 #sidebar_header {
 	padding:12px 15px 10px 0;
@@ -938,7 +938,7 @@ SIDEBARS & ASIDES
 
 .sidebar.sidebar-right {
 	padding-top:0;
-	background: #e5e2e0;
+	background: $gray;
 }
 
 
@@ -956,11 +956,11 @@ SIDEBARS & ASIDES
 
 .widget_title {
 	padding: 12px 15px 10px 0;
-    background: #8a2a2b;
+    background: $primary-color;
 }
 
 .widget {
-	background: #E5E2E0;
+	background: $gray;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 25px;
@@ -976,7 +976,7 @@ SIDEBARS & ASIDES
 
 			a {}
 
-			// deep nesting  
+			// deep nesting
 			ul {}
 
 		}
@@ -1008,7 +1008,7 @@ footer {
 	a, a:visited {
 	color: #CCC;
 	    &:hover, &:focus {
-			color: #ccc;    	
+			color: #ccc;
 	    }
 	}
 }
@@ -1107,7 +1107,7 @@ footer {
 		height: auto;
 	}
 }
-	
+
 /*********************
 FOUNDATION STYLES
 *********************/
@@ -1177,8 +1177,13 @@ footer.timely.ai1ec-event-footer {
   font-family: $font-stack !important;
 }
 
-.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details, .ai1ec-event-location {
   font-family: $font-subhead !important;
+}
+
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-time {
+  opacity: 1;
+  font-weight: inherit;
 }
 
 .ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today,{
@@ -1219,4 +1224,37 @@ footer.timely.ai1ec-event-footer {
 
 #calendar_section {
   margin-bottom: 10px;
+}
+
+.events-feed {
+	.ai1ec-time, .ai1ec-location {
+    font-size: 1rem;
+}
+}
+
+.events-feed {
+  .ai1ec-agenda-view {
+    .ai1ec-date {
+      background: none;
+    }
+    .ai1ec-event {
+      border: none;
+    }
+  }
+  .ai1ec-pagination, .ai1ec-subscribe-container, .ai1ec-clearfix, .ai1ec-title-buttons.ai1ec-btn-toolbar, .ai1ec-calendar-toolbar, span.ai1ec-categories {
+    display: none;
+  }
+  .ai1ec-event-time, .ai1ec-event-location {
+    font-size: 1rem !important;
+  }
+  .ai1ec-event-title {
+    font-size: 1.25rem !important;
+  }
+  .timely .ai1ec-btn-default {
+    background: $primary-color;
+    color: #fff;
+    &:hover {
+      border-bottom-color: #adadad !important;
+    }
+  }
 }
