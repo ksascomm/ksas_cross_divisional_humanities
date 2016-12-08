@@ -37,7 +37,6 @@
 				<section class="news-feed">
 				   <h1>News & Announcements</h1>
 				   		<?php  //News Query
-				   		if ( false === ( $news_query = get_transient( 'news_mainpage_query' ) ) ) {
 							$news_query = new WP_Query(array(
 								'post_type' => 'post',
 								'tax_query' => array(
@@ -47,10 +46,8 @@
 										'terms' => array( 'events' ),
 										'operator' => 'NOT IN'
 									)
-								)
+								),
 							));
-						set_transient( 'news_mainpage_query', $news_query, 2592000 );
-						} 	
 
 						if ( $news_query->have_posts() ) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
