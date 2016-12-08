@@ -25,9 +25,9 @@
 						<br>
 
 					<div class="row padding-10">
-						<h2>
-							<a href="<?php echo site_url();?>/events/cat_ids~75/">View All AGHI-sponsored Events</a>
-						</h2>
+						<div class="small-12 columns">
+							<p>A complete calendar of all humanities-related events happening at Johns Hopkins is available on our <a href="<?php echo site_url();?>/events/">events page</a>.</p>	
+						</div>
 					</div>
 
 				</section>
@@ -50,15 +50,17 @@
 							));
 
 						if ( $news_query->have_posts() ) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
-
+						<div class="small-12 columns">
 							<?php get_template_part( 'parts/loop', 'news' ); ?>
-
+						</div>
 						<?php endwhile; endif; ?>
 					<div class="row padding-10">
-						<h2>
-							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">News & Announcements Archive
-							</a>
-						</h2>
+						<div class="small-12 columns">
+							<h2>
+								<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">News & Announcements Archive
+								</a>
+							</h2>
+						</div>
 					</div>
 				</section>
 			</div>
