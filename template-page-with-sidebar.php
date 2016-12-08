@@ -20,7 +20,7 @@ Template Name: Page with Sidebar
 				
 			</main> <!-- end #main -->
 		    
-		    <div class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation"> 
+		    <aside class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation" id="sidebar"> 
 				
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					
@@ -34,7 +34,7 @@ Template Name: Page with Sidebar
 					?>
 					<!-- END Page Specific Sidebar -->
 
-			</div>
+			</aside>
 		
 		</div> <!-- end #inner-content -->
 	
