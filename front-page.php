@@ -17,7 +17,7 @@
 
 			<div class="small-12 large-8 columns">
 
-				<section class="events-feed">
+				<div class="events-feed">
 				   <h1>AGHI-sponsored Events</h1>
 
 					 	<?php echo do_shortcode('[ai1ec view="agenda" cat_name="AGHI"]');	?>
@@ -30,11 +30,11 @@
 						</div>
 					</div>
 
-				</section>
+				</div>
 				
 				<br>
 
-				<section class="news-feed">
+				<div class="news-feed">
 				   <h1>News & Announcements</h1>
 				   		<?php  //News Query
 							$news_query = new WP_Query(array(
@@ -62,7 +62,7 @@
 							</h2>
 						</div>
 					</div>
-				</section>
+				</div>
 			</div>
 
 		 	<aside class="small-12 large-4 columns hide-for-print" id="sidebar">
