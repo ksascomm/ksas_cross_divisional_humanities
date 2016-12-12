@@ -20,7 +20,7 @@
 				<section class="events-feed">
 				   <h1>AGHI-sponsored Events</h1>
 
-					 	<?php echo do_shortcode('[ai1ec view="agenda" cat_name="AGHI" events_limit="4"]');	?>
+					 	<?php echo do_shortcode('[ai1ec view="agenda" cat_name="AGHI"]');	?>
 							
 						<br>
 
