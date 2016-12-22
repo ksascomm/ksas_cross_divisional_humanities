@@ -15,7 +15,7 @@
 
 			</div> <!-- end #main -->
 
-			<div class="small-12 large-8 columns">
+			<div class="small-12 large-8 columns" role="region">
 
 				<div class="events-feed">
 				   <h1>AGHI-sponsored Events</h1>
