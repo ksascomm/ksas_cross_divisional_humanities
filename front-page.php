@@ -15,7 +15,7 @@
 
 			</div> <!-- end #main -->
 
-			<div class="small-12 large-8 columns" role="region">
+			<div class="small-12 large-8 columns" role="region" aria-label="Events & News">
 
 				<div class="events-feed">
 				   <h1>AGHI-sponsored Events</h1>
