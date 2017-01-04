@@ -1,9 +1,9 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting">
+<article <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="post-<?php the_ID(); ?>">
 						
-	<header class="article-header">	
+	<header class="article-header" aria-label="<?php the_title();?>">	
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
 		<h1 class="entry-title single-title" itemprop="headline">
-			<a href="<?php the_permalink(); ?>">
+			<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">
 				<?php the_title();?>
 			</a>
 		</h1>
