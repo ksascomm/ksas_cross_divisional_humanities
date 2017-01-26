@@ -65,14 +65,16 @@
 				</div>
 			</div>
 
-		 	<aside class="small-12 large-4 columns hide-for-print" id="sidebar">
+			<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
+				<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> 
+					<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<?php if ( is_active_sidebar( 'sidebar1' ) && is_active_sidebar('homepage0')  ) : ?>
+							<hr>
+						<?php endif; ?>
+					<?php dynamic_sidebar( 'homepage0' ); ?>
+				</aside>
+			<?php endif; ?>
 
-				<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>
-					<?php get_sidebar(); ?>
-				<?php } ?>
-				<?php get_sidebar('homepage'); ?>
-
-			</aside>
 		</div> <!-- end #inner-content -->
 
 	</div> <!-- end #content -->
