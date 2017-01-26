@@ -1186,7 +1186,7 @@ th {
   padding: 0; }
 
 .foundation-mq {
-  font-family: "small=0em&medium=32em&large=64em&xlarge=75em&xxlarge=90em"; }
+  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
 
 html {
   font-size: 100%;
@@ -1263,8 +1263,12 @@ button {
     padding-left: 0;
     padding-right: 0; }
   .row .row {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem; }
+    margin-left: -0.625rem;
+    margin-right: -0.625rem; }
+    @media screen and (min-width: 40em) {
+      .row .row {
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem; } }
     .row .row.collapse {
       margin-left: 0;
       margin-right: 0; }
@@ -1275,10 +1279,14 @@ button {
       margin-right: auto; }
 
 .column, .columns {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   width: 100%;
-  float: left;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem; }
+  float: left; }
+  @media screen and (min-width: 40em) {
+    .column, .columns {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
     float: right; }
   .column.end:last-child:last-child, .end.columns:last-child:last-child {
@@ -1541,8 +1549,8 @@ button {
   margin-right: 0; }
 
 .small-uncollapse > .column, .small-uncollapse > .columns {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem; }
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
 
 .small-centered {
   float: none;
@@ -1557,7 +1565,7 @@ button {
   margin-right: 0;
   float: left; }
 
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
   .medium-1 {
     width: 8.33333%; }
   .medium-push-1 {
@@ -2056,7 +2064,7 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
   h1 {
     font-size: 3rem; }
   h2 {
@@ -2185,7 +2193,7 @@ kbd {
 .text-justify {
   text-align: justify; }
 
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
   .medium-text-left {
     text-align: left; }
   .medium-text-right {
@@ -2274,7 +2282,7 @@ kbd {
   border: 1px solid transparent;
   border-radius: 0;
   padding: 0.85em 1em;
-  margin: 0 1rem 1rem 0;
+  margin: 0 0 1rem 0;
   font-size: 0.9rem;
   background-color: #8a2a2b;
   color: #fff; }
@@ -2396,7 +2404,7 @@ textarea {
   margin: 0 0 1rem;
   font-family: inherit;
   font-size: 1rem;
-  color: #8a8a8a;
+  color: #2C2C33;
   background-color: #fefefe;
   box-shadow: inset 0 1px 2px rgba(44, 44, 51, 0.1);
   border-radius: 0;
@@ -2538,8 +2546,8 @@ select {
   font-size: 1rem;
   font-family: inherit;
   line-height: normal;
-  color: #8a8a8a;
-  background-color: #fafafa;
+  color: #2C2C33;
+  background-color: #fefefe;
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2582,27 +2590,27 @@ select {
 .invisible {
   visibility: hidden; }
 
-@media screen and (min-width: 0em) and (max-width: 31.9375em) {
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .hide-for-small-only {
     display: none !important; } }
 
-@media screen and (max-width: 0em), screen and (min-width: 32em) {
+@media screen and (max-width: 0em), screen and (min-width: 40em) {
   .show-for-small-only {
     display: none !important; } }
 
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
   .hide-for-medium {
     display: none !important; } }
 
-@media screen and (max-width: 31.9375em) {
+@media screen and (max-width: 39.9375em) {
   .show-for-medium {
     display: none !important; } }
 
-@media screen and (min-width: 32em) and (max-width: 63.9375em) {
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .hide-for-medium-only {
     display: none !important; } }
 
-@media screen and (max-width: 31.9375em), screen and (min-width: 64em) {
+@media screen and (max-width: 39.9375em), screen and (min-width: 64em) {
   .show-for-medium-only {
     display: none !important; } }
 
@@ -2845,12 +2853,12 @@ select {
     width: 100%; }
     .button-group.stacked .button:not(:last-child), .button-group.stacked-for-small .button:not(:last-child) {
       border-right: 1px solid; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .button-group.stacked-for-small .button {
       width: auto; }
       .button-group.stacked-for-small .button:not(:last-child) {
         border-right: 1px solid #fefefe; } }
-  @media screen and (min-width: 0em) and (max-width: 31.9375em) {
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .button-group.stacked-for-small.expanded {
       display: block; }
       .button-group.stacked-for-small.expanded .button {
@@ -3059,7 +3067,7 @@ select {
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 250px;
+  min-width: 200px;
   z-index: 1;
   background: #fefefe;
   border: 1px solid #cacaca; }
@@ -3118,7 +3126,7 @@ select {
   display: block; }
   .media-object img {
     max-width: none; }
-  @media screen and (min-width: 0em) and (max-width: 31.9375em) {
+  @media screen and (min-width: 0em) and (max-width: 39.9375em) {
     .media-object.stack-for-small .media-object-section {
       display: block;
       padding: 0;
@@ -3167,7 +3175,7 @@ select {
     display: table-cell; }
   .menu.vertical > li {
     display: block; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .menu.medium-horizontal > li {
       display: table-cell; }
     .menu.medium-vertical > li {
@@ -3233,7 +3241,7 @@ body {
     clear: both; }
 
 .off-canvas-content,
-.main-content {
+.off-canvas-content {
   min-height: 100%;
   background: #fefefe;
   transition: transform 0.5s ease;
@@ -3274,18 +3282,18 @@ body {
     .is-open-right {
       transform: translateX(-250px); }
 
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
   .position-left.reveal-for-medium {
     left: 0;
     z-index: auto;
     position: fixed; }
-    .position-left.reveal-for-medium ~ .main-content {
+    .position-left.reveal-for-medium ~ .off-canvas-content {
       margin-left: 250px; }
   .position-right.reveal-for-medium {
     right: 0;
     z-index: auto;
     position: fixed; }
-    .position-right.reveal-for-medium ~ .main-content {
+    .position-right.reveal-for-medium ~ .off-canvas-content {
       margin-right: 250px; } }
 
 @media screen and (min-width: 64em) {
@@ -3293,13 +3301,13 @@ body {
     left: 0;
     z-index: auto;
     position: fixed; }
-    .position-left.reveal-for-large ~ .main-content {
+    .position-left.reveal-for-large ~ .off-canvas-content {
       margin-left: 250px; }
   .position-right.reveal-for-large {
     right: 0;
     z-index: auto;
     position: fixed; }
-    .position-right.reveal-for-large ~ .main-content {
+    .position-right.reveal-for-large ~ .off-canvas-content {
       margin-right: 250px; } }
 
 .orbit {
@@ -3387,7 +3395,7 @@ body {
     display: none; }
     .pagination li:last-child, .pagination li:first-child {
       display: inline-block; }
-    @media screen and (min-width: 32em) {
+    @media screen and (min-width: 40em) {
       .pagination li {
         display: inline-block; } }
   .pagination a,
@@ -3582,7 +3590,7 @@ body.is-reveal-open {
   overflow-y: auto; }
   [data-whatinput='mouse'] .reveal {
     outline: 0; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .reveal {
       min-height: 0; } }
   .reveal .column, .reveal .columns,
@@ -3590,26 +3598,26 @@ body.is-reveal-open {
     min-width: 0; }
   .reveal > :last-child {
     margin-bottom: 0; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .reveal {
       width: 600px;
       max-width: 75rem; } }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .reveal .reveal {
       left: auto;
       right: auto;
       margin: 0 auto; } }
   .reveal.collapse {
     padding: 0; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .reveal.tiny {
       width: 30%;
       max-width: 75rem; } }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .reveal.small {
       width: 50%;
       max-width: 75rem; } }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .reveal.large {
       width: 90%;
       max-width: 75rem; } }
@@ -3993,14 +4001,14 @@ table.hover tr:nth-of-type(even):hover {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #eee; }
+    background-color: #e6e6e6; }
   .top-bar input {
     width: 200px;
     margin-right: 1rem; }
   .top-bar input.button {
     width: auto; }
 
-@media screen and (max-width: 31.9375em) {
+@media screen and (max-width: 39.9375em) {
   .stacked-for-small .top-bar-title {
     width: 100%; }
   .stacked-for-small .top-bar-right {
@@ -4024,7 +4032,7 @@ table.hover tr:nth-of-type(even):hover {
   .stacked-for-large .top-bar-left {
     width: 100%; } }
 
-@media screen and (min-width: 0em) and (max-width: 31.9375em) {
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .top-bar-title {
     width: 100%; }
   .top-bar-right {
@@ -6199,7 +6207,7 @@ HEADER STYLES
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .header h1 {
       font-size: 2rem;
       line-height: 1.1em; } }
@@ -6419,7 +6427,7 @@ POSTS & CONTENT STYLES
 .hero {
   background: #E5E2E0; }
 
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 40em) {
   #caption {
     margin-top: 4em; } }
 
@@ -6484,7 +6492,7 @@ POSTS & CONTENT STYLES
   border: 1px solid transparent;
   border-radius: 0;
   padding: 0.85em 1em;
-  margin: 0 1rem 1rem 0;
+  margin: 0 0 1rem 0;
   font-size: 0.9rem;
   background-color: #8a2a2b;
   color: #fff; }
@@ -6624,7 +6632,7 @@ SIDEBARS & ASIDES
 *********************/
 .sidebar {
   padding: 0px 20px 1px 20px; }
-  @media screen and (min-width: 32em) {
+  @media screen and (min-width: 40em) {
     .sidebar {
       margin-bottom: 25px; } }
   .sidebar h5 {
