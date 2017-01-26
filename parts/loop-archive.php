@@ -1,6 +1,6 @@
 <article <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="post-<?php the_ID(); ?>">				
 	<div class="article-header">
-		<h2 itemprop="headline">>
+		<h2 itemprop="headline">
 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" id="post-<?php the_ID(); ?>">
 				<?php the_title(); ?>
 			</a>
