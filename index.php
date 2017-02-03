@@ -4,12 +4,9 @@
 	
 		<div id="inner-content" class="row">
 	
-		     <main id="main" class="small-12 large-8 large-push-2 columns" role="main">
+		     <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
 		     	<?php the_breadcrumb(); ?>
-		    	<header>
 		    		<h1 class="page-title">News & Announcements <?php the_archive_title();?></h1>
-		    	</header>
-
 
 				<?php $news_archive_query = new WP_Query(array(
 						'post_type' => 'post',
@@ -21,7 +18,7 @@
 								'operator' => 'NOT IN'
 							)
 						),
-						'posts_per_page' => 10,));
+						'posts_per_page' => 7,));
 			
 
 			     if ($news_archive_query->have_posts()) : while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
@@ -41,9 +38,10 @@
 																								
 		    </main> <!-- end #main -->
 		    
-			<div class="small-12 large-2 large-pull-8 columns hide-for-print" role="navigation"> 
-				<?php get_sidebar(); ?>
+			<div class="small-12 large-3 large-pull-9 columns hide-for-print archive" role="navigation"> 
+				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 			</div>
+
 
 		</div> <!-- end #inner-content -->
 

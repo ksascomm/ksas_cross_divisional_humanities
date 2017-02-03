@@ -45,13 +45,13 @@
 
   
 
-elseif (is_home()) { ?>
+    elseif (is_home()) { ?>
 
-                <li><a href="<?php echo $home_url; ?>">Home</a></li>
-                <li><a href="<?php echo $home_url; ?>/about">About</a></li>
-                <li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
+                    <li><a href="<?php echo $home_url; ?>">Home</a></li>
+                    <li><a href="<?php echo $home_url; ?>/about">About</a></li>
+                    <li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
 
-        <? }   
+            <? }   
 
-        echo '</ul>';
+            echo '</ul>';
 } 
