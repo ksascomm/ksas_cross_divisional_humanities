@@ -6334,6 +6334,9 @@ NAVIGATION STYLES
   color: #ccc;
   margin-left: -15px; }
 
+#sponsored h3 small {
+  color: #2C2C33; }
+
 a.off-canvas-submenu-call {
   border: none !important;
   color: #2c2c33 !important; }

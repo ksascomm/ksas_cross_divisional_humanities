@@ -1,3 +1,6 @@
+ <?php $theme_option = flagship_sub_get_global_options(); 
+        $collection_name = $theme_option['flagship_sub_search_collection'];
+    ?>
 <div class="off-canvas-bg hide-for-small-only">
   <div id="pattern" class="pattern">
     <div class="offcanvas-top">
@@ -52,10 +55,11 @@
                 </div>
               <div class="column" role="menuitem">
                   <a href="/giving/" class="blue_bg button"><span class="fa fa-gift"></span> Give Now!</a>
-                  <form method="GET" action="<?php echo site_url('/search'); ?>" role="search" id="search-bar">
+                  <form method="GET" action="<?php echo site_url('/search'); ?>" role="search" id="search-bar" aria-labelledby="search-bar">
                         <input type="submit" class="icon-search" value="&#xe004;" />
                         <label for="search" class="screen-reader-text">Search</label>
                         <input type="text" id="search" name="q" placeholder="Search this site" aria-label="search"/>
+                        <input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
                   </form>
               </div>
             </div>

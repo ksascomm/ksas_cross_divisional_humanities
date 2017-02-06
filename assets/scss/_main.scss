@@ -380,6 +380,14 @@ NAVIGATION STYLES
   }
 }
 
+#sponsored {
+	h3 {
+		small {
+			color: $black;
+		}
+	}
+}
+
 a.off-canvas-submenu-call {
   border: none !important;
   color: #2c2c33 !important;
