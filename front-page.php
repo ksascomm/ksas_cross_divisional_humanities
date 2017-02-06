@@ -36,7 +36,7 @@
 
 				<div class="news-feed">
 				   <h1>News & Announcements</h1>
-				   		<?php  //News Query
+				   		<?php  if ( false === ( $news_query = get_transient( 'news_mainpage_query' ) ) ) {	
 							$news_query = new WP_Query(array(
 								'post_type' => 'post',
 								'tax_query' => array(
@@ -47,13 +47,18 @@
 										'operator' => 'NOT IN'
 									)
 								),
+								'posts_per_page' => 2
 							));
-
+						set_transient( 'news_mainpage_query', $news_query, 2592000 );
+						} 	
 						if ( $news_query->have_posts() ) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
-						<div class="small-12 columns">
-							<?php get_template_part( 'parts/loop', 'news' ); ?>
-						</div>
+
+							<div class="small-12 columns">
+								<?php get_template_part( 'parts/loop', 'news' ); ?>
+							</div>
+
 						<?php endwhile; endif; ?>
+
 					<div class="row padding-10">
 						<div class="small-12 columns">
 							<h2>
@@ -62,16 +67,22 @@
 							</h2>
 						</div>
 					</div>
+
 				</div>
 			</div>
 
 			<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
+
 				<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> 
+
 					<?php dynamic_sidebar( 'sidebar1' ); ?>
+					
 						<?php if ( is_active_sidebar( 'sidebar1' ) && is_active_sidebar('homepage0')  ) : ?>
 							<hr>
 						<?php endif; ?>
+
 					<?php dynamic_sidebar( 'homepage0' ); ?>
+
 				</aside>
 			<?php endif; ?>
 
