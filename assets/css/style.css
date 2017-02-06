@@ -6514,6 +6514,24 @@ PAGE NAVI STYLES
 .page-navigation {
   margin-top: 1rem; }
 
+.pagination {
+  padding: 20px 0;
+  font-size: .75rem;
+  line-height: 1.1; }
+  .pagination a {
+    margin: 2px 2px 2px 0;
+    padding: 6px 9px 5px 9px;
+    text-decoration: none;
+    color: #fefefe !important;
+    background: #2C2C33; }
+    .pagination a:hover {
+      color: #fefefe;
+      background: #8a2a2b; }
+  .pagination .current {
+    padding: 6px 9px 5px 9px;
+    background: #8a2a2b;
+    color: #fefefe; }
+
 /*********************
 COMMENT STYLES
 *********************/

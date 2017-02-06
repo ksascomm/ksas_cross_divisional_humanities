@@ -97,22 +97,22 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 					            </div>
 					             
 					            <div class="section">
-					        <?php
-					            $notices = $results->getNotices();
-					            foreach ($notices as $notice) {
-					                ?>
-					                <p class="notice"><?php echo $notice ?></p>
-					                <?php
-					            }
-					        ?>
+							        <?php
+							            $notices = $results->getNotices();
+							            foreach ($notices as $notice) {
+							                ?>
+							                <p class="notice"><?php echo $notice ?></p>
+							                <?php
+							            }
+							        ?>
 					                <div class="pagination">
 					                     
-					        <?php
-					        foreach ($results->getResultsetLinks() as $resultsetLink) {
-					            print "$resultsetLink ";
-					        }
-					        ?>
-					                    <?php echo $results->getNextLink() ?> 
+								        <?php
+								        foreach ($results->getResultsetLinks() as $resultsetLink) {
+								           echo '<li>' . $resultsetLink . '</li>';
+								        }
+								        ?>
+					                    <?php echo '<li>' . $results->getNextLink() . '</li>'; ?> 
 					                </div>
 					                 
 					            </div>
