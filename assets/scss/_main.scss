@@ -266,8 +266,8 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
 	background-color: black!important;
-	/*background-image: url('../images/hdr-10.jpg');*/
     background-position: top;
+    z-index: 1 !important;
 	.title-area {
 		z-index: 1;
 	}

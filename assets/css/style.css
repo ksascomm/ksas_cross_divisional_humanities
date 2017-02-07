@@ -6248,8 +6248,8 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
   background-color: black !important;
-  /*background-image: url('../images/hdr-10.jpg');*/
-  background-position: top; }
+  background-position: top;
+  z-index: 1 !important; }
   .top-bar .title-area {
     z-index: 1; }
   .top-bar ul {
