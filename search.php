@@ -7,7 +7,7 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 
 		<div id="inner-content" class="row">
 	
-			<main id="main" class="large-8 medium-8 columns first" role="main">
+			<main id="main" class="large-8 medium-8 columns first">
 				<h1 class="page-title">Search Results</h1>
 	
 					<?php 

@@ -6,7 +6,7 @@
 
 		<div id="inner-content" class="row">
 	
-			<main id="main" class="large-9 large-push-1 small-12 columns" role="main">
+			<main id="main" class="large-9 large-push-1 small-12 columns">
 
 				<article id="content-not-found">
 				

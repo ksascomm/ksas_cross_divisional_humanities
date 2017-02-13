@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="row">
 	
-		     <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
+		     <main id="main" class="small-12 large-8 large-push-3 columns">
 		     	<?php the_breadcrumb(); ?>
 		    		<h1 class="page-title">News & Announcements <?php the_archive_title();?></h1>
 
