@@ -2,9 +2,9 @@
 						
 	
 	<?php if ( !is_front_page() ) : ?>
-		<header class="article-header">
+		<div class="article-header" itemprop="headline">
 			<h1 class="page-title"><?php the_title(); ?></h1>
-		</header> <!-- end article header -->	
+		</div> <!-- end article header -->	
 	<?php endif; ?>
 					
     <div class="entry-content" itemprop="articleBody">
