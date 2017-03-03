@@ -25,7 +25,7 @@
 																								
 		    </main> <!-- end #main -->
 		    
-			<div class="small-12 large-3 large-pull-9 columns hide-for-print archive" role="navigation"> 
+			<div class="small-12 large-3 large-pull-9 columns hide-for-print archive"> 
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 			</div>
 
