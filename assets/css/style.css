@@ -6136,6 +6136,14 @@ ul.nav {
   width: 1px;
   overflow: hidden; }
 
+a.skipLink {
+  position: absolute;
+  left: -9999px;
+  background: #fefefe;
+  padding: 5px 10px; }
+  a.skipLink:focus, a.skipLink:active, a.skipLink:hover {
+    left: 0; }
+
 .padding-10 {
   padding: 10px; }
 
@@ -6143,16 +6151,20 @@ ul.nav {
   float: left;
   margin-right: 15px; }
 
+.highlights h1 small {
+  color: #2C2C33;
+  font-family: "gentona-book", Arial, sans-serif; }
+
 /*********************
 LINK STYLES
 *********************/
 a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-#inner-content a {
+#inner-content a, #inner-content-2 a {
   border-bottom: .125em dotted;
   border-bottom-color: rgba(0, 0, 0, 0.1); }
-  #inner-content a:hover, #inner-content a:focus {
+  #inner-content a:hover, #inner-content a:focus, #inner-content-2 a:hover, #inner-content-2 a:focus {
     color: #2C2C33;
     border-bottom-color: #8a2a2b;
     border-bottom-style: solid; }
@@ -6405,9 +6417,14 @@ a.off-canvas-submenu-call {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.news-feed, .events-feed {
+.brown-bg {
   background: #d9c89e;
-  background: rgba(217, 200, 158, 0.5);
+  background: rgba(217, 200, 158, 0.5); }
+
+.gray-bg {
+  background: #E5E2E0; }
+
+.news-feed, .events-feed {
   padding: 10px; }
   .news-feed h1, .events-feed h1 {
     font-size: 1.5rem; }

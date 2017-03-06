@@ -17,7 +17,7 @@
 
 			<div class="small-12 large-8 columns" role="region" aria-label="Events & News">
 
-				<div class="events-feed">
+				<div class="events-feed brown-bg">
 				   <h1>AGHI-sponsored Events</h1>
 
 					 	<?php echo do_shortcode('[ai1ec view="agenda" cat_name="AGHI"]');	?>
@@ -34,7 +34,7 @@
 				
 				<br>
 
-				<div class="news-feed">
+				<div class="news-feed brown-bg">
 				   <h1>News & Announcements</h1>
 				   		<?php  if ( false === ( $news_query = get_transient( 'news_mainpage_query' ) ) ) {	
 							$news_query = new WP_Query(array(

@@ -107,6 +107,16 @@ ul.nav {
     overflow: hidden;
 }
 
+a.skipLink {
+  position: absolute;
+  left: -9999px;
+  background: $white;
+  padding: 5px 10px;
+  &:focus, &:active, &:hover {
+    left: 0;
+  }
+}
+
 .padding-10 {
 	padding: 10px;
 }
@@ -114,6 +124,16 @@ ul.nav {
 .floatleft, .alignleft {
     float: left;
     margin-right: 15px;
+}
+
+
+.highlights {
+	h1{
+	  small {
+	  	color: $black;
+	  	font-family: $font-subhead;
+	  }		
+	}
 }
 
 /*********************
@@ -127,7 +147,7 @@ a, a:visited {
 	}
 }
 
-#inner-content a {
+#inner-content a, #inner-content-2 a {
 	border-bottom: .125em dotted;
 	border-bottom-color: rgba(0,0,0,.1);
 		&:hover, &:focus {
@@ -476,10 +496,16 @@ a.off-canvas-submenu-call {
 POSTS & CONTENT STYLES
 *********************/
 
+.brown-bg {
+	background: #d9c89e;
+ 	background: rgba(217, 200, 158, 0.5);
+}
+
+.gray-bg {
+	background: $gray;
+}
 
 .news-feed, .events-feed {
-  background: #d9c89e;
-  background: rgba(217, 200, 158, 0.5);
   padding: 10px;
   	h1 {
 	  font-size: 1.5rem;

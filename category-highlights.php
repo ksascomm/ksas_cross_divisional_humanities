@@ -4,34 +4,32 @@
 	
 		<div id="inner-content" class="row">
 		
-		    <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
+		    <main id="main" class="small-12 large-10 large-push-1 columns" role="main">
 			    
-		    	<header>
-		    		<h1 class="page-title">Upcoming Events</h1>
-		    	</header>
+ 				<h1 class="page-title">Humanities Highlights</h1>
+					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 
 		    	<?php //Events Query	 
-				 $events_archive_query = new WP_Query(array(
+				 $highlights_archive_query = new WP_Query(array(
 					'post_type' => 'post',
 					'posts_per_page' => '-1',
 					'orderby' => 'date',
-					'order' => 'asc',
+					'order' => 'desc',
 					'tax_query' => array(
 						array(
 							'taxonomy' => 'category',
 							'field' => 'slug',
-							'terms' => array( 'news' ),
-							'operator' => 'NOT IN'
+							'terms' => array( 'highlights' ),
 						)
 					)
 				)); ?>
 			
 		
-		    	<?php if ($events_archive_query->have_posts()) : while ($events_archive_query->have_posts()) : $events_archive_query->the_post(); ?>
+		    	<?php if ($highlights_archive_query->have_posts()) : while ($highlights_archive_query->have_posts()) : $highlights_archive_query->the_post(); ?>
 			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
+					<?php get_template_part( 'parts/loop', 'highlights' ); ?>
+
+				  <hr>  
 				<?php endwhile; ?>	
 					
 				<?php else : ?>
@@ -42,7 +40,7 @@
 		
 			</main> <!-- end #main -->
 	
-			<div class="small-12 large-4 large-pull-8 columns hide-for-print" role="navigation"> 
+			<div class="small-12 large-4 large-pull-8 columns hide-for-print"> 
 				<?php get_template_part( 'parts/nav', 'breadcrumbs' ); ?>
 				<?php get_sidebar(); ?>
 			</div>
