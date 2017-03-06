@@ -64,7 +64,9 @@ Template Name: Front Page Demo
 											'terms' => array( 'highlights' ),
 										)
 									),
-									'posts_per_page' => 1
+									'posts_per_page' => 1,
+									'orderby' => 'rand', 
+									'order' => 'ASC'
 								)); 
 
 						if ( $highlights_query->have_posts() ) : while ($highlights_query->have_posts()) : $highlights_query->the_post(); ?>

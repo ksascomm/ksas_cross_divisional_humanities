@@ -43,8 +43,7 @@
 									array(
 										'taxonomy' => 'category',
 										'field' => 'slug',
-										'terms' => array( 'events' ),
-										'operator' => 'NOT IN'
+										'terms' => array( 'news' ),
 									)
 								),
 								'posts_per_page' => 2
