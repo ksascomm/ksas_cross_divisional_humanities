@@ -3,7 +3,7 @@
 <?php get_template_part( 'parts/explore', 'ksas' ); ?>
 
 <?php if(is_mobile()) :  ?>
-<div class="top-bar" id="top-bar-menu">
+<div class="top-bar hide-for-print" id="top-bar-menu">
 <?php else : ?>
 	<?php if (is_front_page()) : ?>
 		<div class="top-bar backstretch-banner-home" id="top-bar-menu">
@@ -12,7 +12,12 @@
 	<?php endif; ?>
 <?php endif;?>
 
-	<div id="mobile-nav">
+	<div class="show-for-print">
+		<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
+		<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
+	</div>
+
+	<div id="mobile-nav" class="hide-for-print">
   		<div class="row">
 	        <div class="small-12 columns">
 	  			<div class="mobile-logo">
@@ -29,7 +34,7 @@
   		</div>
 	</div>
 
-	<div id="desktop-nav">
+	<div id="desktop-nav" class="hide-for-print">
 		<div class="small-12 columns" id="logo_nav">
 			<div class="row">
 				<div class="small-12 medium-4 large-3 columns">
@@ -46,10 +51,10 @@
 		</div>
 	</div>
 	
-	<div class="top-bar-right show-for-medium">
+	<div class="top-bar-right show-for-medium hide-for-print">
 		<?php joints_top_nav(); ?>	
 	</div>
-	<div class="top-bar-right float-right show-for-small-only">
+	<div class="top-bar-right float-right show-for-small-only hide-for-print">
 		<ul class="menu">
 			 <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li>
 			<li><a data-toggle="off-canvas">Menu</a></li>

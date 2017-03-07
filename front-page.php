@@ -72,7 +72,7 @@
 
 			<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
 
-				<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> 
+				<aside class="small-12 large-4 columns" id="sidebar"> 
 
 					<?php dynamic_sidebar( 'sidebar1' ); ?>
 					

@@ -7026,6 +7026,10 @@ the original dimensions and you are good to go.
   #mobile-nav {
     background: transparent; } }
 
+@media print {
+  .backstretch {
+    display: none; } }
+
 /******************************************************************
 
 Stylesheet: Print Stylesheet

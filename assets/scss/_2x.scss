@@ -93,3 +93,9 @@ the original dimensions and you are good to go.
         background: transparent;
     }
 }
+
+@media print {
+  .backstretch {
+    display: none;
+  }
+}

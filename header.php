@@ -35,7 +35,7 @@
 				<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 			<![endif]-->
 			<meta name="msapplication-TileColor" content="#f01d4f">
-			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
+			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/favicons/apple-icon-120x120.png">
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
 	    

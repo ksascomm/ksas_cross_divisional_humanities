@@ -20,7 +20,7 @@ Template Name: Page with Sidebar
 				
 			</main> <!-- end #main -->
 		    
-		    <aside class="small-12 large-3 large-pull-9 columns hide-for-print" id="sidebar"> 
+		    <aside class="small-12 large-3 large-pull-9 columns" id="sidebar"> 
 				
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					
