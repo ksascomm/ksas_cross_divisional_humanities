@@ -126,6 +126,7 @@ function delete_academic_transients($post_id) {
 			   
 			delete_transient('news_query');
 			delete_transient('news_mainpage_query');
+			delete_transient('highlights_mainpage_query');
 		break;
 		
 		case 'slider' :
