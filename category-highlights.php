@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="row">
 		
-		    <main id="main" class="small-12 large-10 large-push-1 columns" role="main">
+		    <main id="main" class="small-12 large-10 large-push-1 columns">
 			    
  				<h1 class="page-title">Humanities Highlights</h1>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
