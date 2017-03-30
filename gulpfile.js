@@ -3,6 +3,8 @@ var gulp  = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'), 
+    sourcemaps = require('gulp-sourcemaps'),
+    cssnano = require('gulp-cssnano'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     uglify = require('gulp-uglify'),
@@ -11,8 +13,8 @@ var gulp  = require('gulp'),
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
     bower = require('gulp-bower');
-    minifycss = require('gulp-minify-css'),  //installed manually
     imageop = require('gulp-image-optimization'); //installed manually
+    babel = require('gulp-babel'),
     argv = require('yargs').argv; //installed manually
 
 var config = {
@@ -21,6 +23,12 @@ var config = {
 }
 
 var URL = 'bicycle.dev/humanities-institute';
+
+// IF YOU UPDATE FOUNDATION VIA BOWER, RUN THIS TO SAVE UPDATED FILES TO /VENDOR
+gulp.task('bower', function() {
+  return bower({ cmd: 'update'})
+    .pipe(gulp.dest('vendor/'))
+});  
 
 gulp.task('browser-sync', ['styles'], function() {
 
@@ -37,22 +45,23 @@ gulp.task('browser-sync', ['styles'], function() {
     
 // Compile Sass, Autoprefix and minify
 gulp.task('styles', function() {
-  return gulp.src('./assets/scss/**/*.scss')
-    .pipe(plumber(function(error) {
+    return gulp.src('./assets/scss/**/*.scss')
+        .pipe(plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
-    }))
-    .pipe(sass())
-    .pipe(autoprefixer({
+        }))
+        .pipe(sourcemaps.init()) // Start Sourcemaps
+        .pipe(sass())
+        .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-    .pipe(gulp.dest('./assets/css/'))     
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('./assets/css/'))
-    .pipe(browserSync.stream({match: './**/*.css'}));
-});   
+        .pipe(gulp.dest('./assets/css/'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(cssnano())
+        .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
+        .pipe(gulp.dest('./assets/css/'))
+});  
 
 // Compile Fontawesome fonts, place in /fonts directory
 gulp.task('icons', function() { 
@@ -89,7 +98,7 @@ gulp.task('foundation-js', function() {
           './vendor/foundation-sites/js/foundation.util.*.js',
           
           // Pick the components you need in your project
-          './vendor/foundation-sites/js/foundation.abide.js',
+          //'./vendor/foundation-sites/js/foundation.abide.js',
           './vendor/foundation-sites/js/foundation.accordion.js',
           './vendor/foundation-sites/js/foundation.accordionMenu.js',
           './vendor/foundation-sites/js/foundation.drilldown.js',
@@ -97,30 +106,30 @@ gulp.task('foundation-js', function() {
           './vendor/foundation-sites/js/foundation.dropdownMenu.js',
           './vendor/foundation-sites/js/foundation.equalizer.js',
           './vendor/foundation-sites/js/foundation.interchange.js',
-          './vendor/foundation-sites/js/foundation.magellan.js',
+          //'./vendor/foundation-sites/js/foundation.magellan.js',
           './vendor/foundation-sites/js/foundation.offcanvas.js',
           './vendor/foundation-sites/js/foundation.orbit.js',
           './vendor/foundation-sites/js/foundation.responsiveMenu.js',
-          './vendor/foundation-sites/js/foundation.responsiveToggle.js',
-          './vendor/foundation-sites/js/foundation.reveal.js',
-          './vendor/foundation-sites/js/foundation.slider.js',
-          './vendor/foundation-sites/js/foundation.sticky.js',
+          //'./vendor/foundation-sites/js/foundation.responsiveToggle.js',
+          //'./vendor/foundation-sites/js/foundation.reveal.js',
+          //'./vendor/foundation-sites/js/foundation.slider.js',
+          //'./vendor/foundation-sites/js/foundation.sticky.js',
           './vendor/foundation-sites/js/foundation.tabs.js',
-          './vendor/foundation-sites/js/foundation.toggler.js',
-          './vendor/foundation-sites/js/foundation.tooltip.js',
+          //'./vendor/foundation-sites/js/foundation.toggler.js',
+          //'./vendor/foundation-sites/js/foundation.tooltip.js',
   ])
+  .pipe(babel({
+    presets: ['es2015'],
+      compact: true
+  }))
+    .pipe(sourcemaps.init())
     .pipe(concat('foundation.js'))
     .pipe(gulp.dest('./assets/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
+    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified Foundation JS
     .pipe(gulp.dest('./assets/js'))
 });
-
-// Update Foundation with Bower and save to /vendor
-gulp.task('bower', function() {
-  return bower({ cmd: 'update'})
-    .pipe(gulp.dest('vendor/'))
-});    
 
 gulp.task('images', function(cb) {
     gulp.src(['assets/images/**/*.png','assets/images/**/*.jpg','assets/images/**/*.gif','assets/images/**/*.jpeg']).pipe(imageop({

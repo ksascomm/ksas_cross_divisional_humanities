@@ -1,1 +1,12 @@
 jQuery(document).foundation();
+
+  // following pulled from foundation.dropdownMenu.js
+  Foundation.Keyboard.register('DropdownMenu',{
+//    'ENTER': 'open',
+    'SPACE': 'open',
+    'ARROW_RIGHT': 'next',
+    'ARROW_UP': 'up',
+    'ARROW_DOWN': 'down',
+    'ARROW_LEFT': 'previous',
+    'ESCAPE': 'close'
+  });

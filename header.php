@@ -51,16 +51,14 @@
 		
 	<body <?php body_class(); ?>>
 		<div class="off-canvas-wrapper">
-			
-			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-				
+							
 				<a href="#main" class="skipLink">Skip to main content</a>
 				
 				<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 				
 				<div class="off-canvas-content" data-off-canvas-content>
 				
-					<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+					<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 							
 						 <!-- This navs will be applied to the topbar, above all content 
 							  To see additional nav styles, visit the /parts directory -->

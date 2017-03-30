@@ -1191,7 +1191,7 @@ PLUGIN STYLES
 }
 
 li.person {
-  margin-bottom: 15px;
+  margin-bottom: 1.25rem;
   min-height: 95px;
   padding-left: 20px;
   padding-top: 3px;
@@ -1209,14 +1209,13 @@ li.person {
   &.sub-head h2 {
     font-size: 1.75rem;
     margin: 0 0 10px 0;
-    color: #000;
+    color: $black;
   }
   img {
-    max-width: 120px;
+    max-width: 150px;
     clear: left;
     float: left;
-    margin-bottom: 23px;
-    margin-right: 15px;
+    margin-right: 1rem;
   }
   h3 {
   	font-size: 1.5rem;

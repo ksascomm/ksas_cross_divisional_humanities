@@ -47,6 +47,7 @@ CSS file.
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
+@include foundation-menu-icon;
 @include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
@@ -64,7 +65,7 @@ CSS file.
 
 // Import Font Awesome
 // Import foundation.scss from vendor files
-@import "../../vendor/fontawesome/scss/font-awesome";
+@import "../../vendor/font-awesome/scss/font-awesome";
 
 // Import your custom styles
 @import "main";

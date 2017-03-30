@@ -16,7 +16,6 @@
 						</div> <!-- end #inner-footer -->
 					</footer> <!-- end .footer -->
 				</div>  <!-- end .main-content -->
-			</div> <!-- end .off-canvas-wrapper-inner -->
 		</div> <!-- end .off-canvas-wrapper -->
 		<?php wp_footer(); ?>
 	</body>

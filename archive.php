@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="row">
 		
-		    <main id="main" class="small-12 large-8 large-push-2 columns">
+		    <main id="main" class="small-12 large-9 large-push-1 columns">
 			    
 			    <h1 class="page-title"><?php the_archive_title();?></h1>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>

@@ -29,7 +29,7 @@
 
 <div id="content">
 	<div id="inner-content" class="row">
-	   <main id="main" class="small-12 large-8 large-push-3 columns">
+	   <main id="main" class="small-12 large-9 large-push-1 columns">
 			<?php the_breadcrumb(); ?>	
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="row">
