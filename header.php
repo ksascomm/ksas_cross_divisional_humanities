@@ -58,7 +58,7 @@
 				
 				<div class="off-canvas-content" data-off-canvas-content>
 				
-					<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+					<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader" aria-label="menu">
 							
 						 <!-- This navs will be applied to the topbar, above all content 
 							  To see additional nav styles, visit the /parts directory -->

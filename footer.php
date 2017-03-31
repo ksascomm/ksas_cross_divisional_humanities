@@ -15,7 +15,7 @@
 								</ul>
 							</div>
 							<!-- Social Media -->
-							<div class="small-12 medium-3 large-2 columns end" role="navigation" aria-labelledby="social-media">
+							<div class="small-12 medium-3 large-2 columns end" aria-label="social-media links">
 								<div class="small-6 columns">
 									<a href="http://facebook.com/jhuksas" title="Facebook"><span class="fa fa-facebook-official fa-3x"></span><span class="screen-reader-text">Facebook</span></a>
 								</div>
