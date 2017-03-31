@@ -4,7 +4,7 @@
 <div class="off-canvas-bg hide-for-small-only hide-for-print">
   <div id="pattern" class="pattern">
     <div class="offcanvas-top">
-        <div class="o-content" aria-hidden="false" role="navigation">
+        <div class="o-content" aria-hidden="false" role="navigation" aria-label="Global JHU Links">
           <div class="row">
             <div class="small-up-4" id="global-links" role="list">
                 <div class="column">
