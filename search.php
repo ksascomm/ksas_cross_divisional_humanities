@@ -7,7 +7,7 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 
 		<div id="inner-content" class="row">
 	
-			<main id="main" class="large-8 medium-8 columns first">
+			<main id="main" class="small-12 large-8 columns">
 				<h1 class="page-title">Search Results</h1>
 	
 					<?php 
@@ -26,9 +26,8 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 					    $sponsored_result = $results->getSponsoredResult();
 					    ?>
 
-					    <?php
-					    if ($hits > 0) {
-					        ?>
+					    <?php if ($hits > 0) { ?>
+
 					       <div class="callout secondary">
 						       <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
 						            <fieldset> 
@@ -52,53 +51,43 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 						                    </label>
 						            </fieldset>
 						       </form>
-					       </div>      
+					       </div>   
+
 					       <p>Results <strong><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></strong> of about <strong><?php echo $hits ?></strong></p>
 					           
 					        <?php if (empty($sponsored_result) == false) { ?>
 						        <div class="callout primary" id="sponsored">
 						        	<h2>Featured Result</h2>
-						        	<h3>
-						        		<a href="<?php echo $sponsored_result['sponsored_url']; ?>">
+						        	<h3><a href="<?php echo $sponsored_result['sponsored_url']; ?>">
 						        			<?php echo $sponsored_result['sponsored_title']; ?>
-						        		</a>
-						        		<small> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small>
+						        		</a><small> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small>
 						        	</h3>
 						        </div>
 					         <?php } ?>   
 					            <div id="search-results">
 					                <ul>
-					           
-					        <?php
-					        while ($result = $results->getNextResult()) {
-					            // note what results are PDFs
-					            $pdfNote = '';
-					            if (preg_match('{application/pdf}', $result['mimeType'])) {
-					                $pdfNote = '<span class="black"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-					[PDF]</span> ';
-					            }
-					            ?>
+								        <?php
+								        while ($result = $results->getNextResult()) {
+								            // note what results are PDFs
+								            $pdfNote = '';
+								            if (preg_match('{application/pdf}', $result['mimeType'])) {
+								                $pdfNote = '<span class="black"><span class="fa fa-file-pdf-o" aria-hidden="true"></span> [PDF]</span> ';
+								            }
+								            ?>
 					                    <li>
 					                        <h4><?php echo $pdfNote ?><a href="<?php echo $result['path'] ?>"><?php echo $result['title'] ?></a></h4>
-					            <?php
-					            if (array_key_exists('description', $result) && $result['description']) {
-					                ?>
-					                        <p><?php echo $result['description'] ?></p>
-					                <?php
-					            }
-					            ?>
-					                        <div class="url"><?php echo $result['path'] ?> - <?php echo $result['sizeHumanReadable'] ?></div>
-					                    </li>
-					                    <hr>
-					            <?php
-					        }
-					        ?>
+					                        <?php if (array_key_exists('description', $result) && $result['description']) { ?>
+								                 <p><?php echo $result['description'] ?></p>
+								            <?php } ?>
+								            <div class="url"><?php echo $result['path'] ?> - <?php echo $result['sizeHumanReadable'] ?></div>
+								        </li>
+								        <hr>
+								            <?php } ?>
 					                </ul>
 					            </div>
 					             
 					            <div class="section">
-							        <?php
-							            $notices = $results->getNotices();
+							        <?php $notices = $results->getNotices();
 							            foreach ($notices as $notice) {
 							                ?>
 							                <p class="notice"><?php echo $notice ?></p>
@@ -107,11 +96,9 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 							        ?>
 					                <div class="pagination">
 					                     
-								        <?php
-								        foreach ($results->getResultsetLinks() as $resultsetLink) {
+								        <?php foreach ($results->getResultsetLinks() as $resultsetLink) {
 								           echo '<li>' . $resultsetLink . '</li>';
-								        }
-								        ?>
+								        } ?>
 					                    <?php echo '<li>' . $results->getNextLink() . '</li>'; ?> 
 					                </div>
 					                 
@@ -120,18 +107,13 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 					    } else {
 					        // no hits
 					        ?>
-					            </div>
-					             
-					        <?php
-					            $notices = $results->getNotices();
-					            foreach ($notices as $notice) {
-					                ?>
+					            
+					    <?php $notices = $results->getNotices();
+					        foreach ($notices as $notice) { ?>
 					            <p class="notice"><?php echo $notice ?></p>
-					                <?php
-					            }
-					        ?>
-					             
-					            <h3 class="black">There are no pages matching your search.</h3>
+					     <?php } ?>
+					      <div class="callout secondary">    
+					       <p>Sorry, No Results. Try your search again on <a href="https://www.jhu.edu/search/">JHU.edu</a>, or enter a new search term below:</p>
 					       <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
 					            <fieldset> 
 					                <label>
@@ -154,18 +136,14 @@ $collection_name = $theme_option['flagship_sub_search_collection']; ?>
 					                    </label>
 					            </fieldset>
 					       </form>        
-
-					        <?php
-					    }
-					} catch (KSAS_GoogleSearchException $e) {
+						</div>
+					<?php } } catch (KSAS_GoogleSearchException $e) {
 					    $docTitle = "Search Temporarily Unavailable";
-					    ?>
+					?>
 					    <div class="section">
 					        <p>We're sorry, the search engine is temporarily unavailable. Please try your search again later.</p>
 					    </div>
-					    <?php
-					} ?>
-	
+					<?php } ?>
 		    </main> <!-- end #main -->
 		
 		    <?php get_sidebar(); ?>
