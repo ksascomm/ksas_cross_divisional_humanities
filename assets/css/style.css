@@ -440,6 +440,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateY(-100%);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-in-down.mui-enter.mui-enter-active {
@@ -450,6 +451,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateX(-100%);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-in-left.mui-enter.mui-enter-active {
@@ -460,6 +462,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateY(100%);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-in-up.mui-enter.mui-enter-active {
@@ -470,6 +473,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateX(100%);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-in-right.mui-enter.mui-enter-active {
@@ -480,6 +484,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateY(0);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-out-down.mui-leave.mui-leave-active {
@@ -490,6 +495,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateX(0);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-out-right.mui-leave.mui-leave-active {
@@ -500,6 +506,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateY(0);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-out-up.mui-leave.mui-leave-active {
@@ -510,6 +517,7 @@ CSS3 GRADIENTS.
   transition-timing-function: linear;
   transform: translateX(0);
   transition-property: transform, opacity;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .slide-out-left.mui-leave.mui-leave-active {
@@ -2653,10 +2661,6 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #8a8a8a; }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #8a8a8a; }
-
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #8a8a8a; }
@@ -2837,8 +2841,6 @@ select {
   border-color: #ec5840;
   background-color: #fcedeb; }
   .is-invalid-input:not(:focus)::-webkit-input-placeholder {
-    color: #ec5840; }
-  .is-invalid-input:not(:focus)::-moz-placeholder {
     color: #ec5840; }
   .is-invalid-input:not(:focus):-ms-input-placeholder {
     color: #ec5840; }
@@ -3825,6 +3827,7 @@ select {
   position: fixed;
   z-index: 1;
   transition: transform 0.5s ease;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: #e6e6e6; }
   [data-whatinput='mouse'] .off-canvas {
@@ -3840,6 +3843,7 @@ select {
   position: absolute;
   z-index: 1;
   transition: transform 0.5s ease;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: #e6e6e6; }
   [data-whatinput='mouse'] .off-canvas-absolute {
@@ -3933,6 +3937,7 @@ select {
 
 .off-canvas-content {
   transition: transform 0.5s ease;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 @media print, screen and (min-width: 40em) {
@@ -4259,6 +4264,7 @@ html.is-reveal-open body {
 
 .reveal {
   z-index: 1006;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   display: none;
   padding: 1rem;
@@ -4440,34 +4446,27 @@ table {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 0; }
-  table thead,
-  table tbody,
-  table tfoot {
+  thead, tbody, tfoot {
     border: 1px solid #f1f1f1;
     background-color: #fefefe; }
-  table caption {
+  caption {
     padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold; }
-  table thead {
+  thead {
     background: #f8f8f8;
     color: #2C2C33; }
-  table tfoot {
+  tfoot {
     background: #f1f1f1;
     color: #2C2C33; }
-  table thead tr,
-  table tfoot tr {
+  thead tr, tfoot tr {
     background: transparent; }
-  table thead th,
-  table thead td,
-  table tfoot th,
-  table tfoot td {
+  thead th, thead td, tfoot th, tfoot td {
     padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold;
     text-align: left; }
-  table tbody th,
-  table tbody td {
+  tbody th, tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
-  table tbody tr:nth-child(even) {
+  tbody tr:nth-child(even) {
     border-bottom: 0;
     background-color: #f1f1f1; }
   table.unstriped tbody {
