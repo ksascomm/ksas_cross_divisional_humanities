@@ -43,6 +43,7 @@
 				<?php foreach($roles as $role) {
 					$role_slug = $role->slug;
 					$role_name = $role->name;
+					if ($role_slug !== 'fellows') {
 						$people_query = new WP_Query(array(
 								'post_type' => 'people',
 								'role' => $role_slug,
@@ -81,7 +82,7 @@
 								</div>	
 							</div>
 						</li>			
-				<?php endwhile; endif; } wp_reset_postdata(); ?>
+				<?php endwhile; endif; } } wp_reset_postdata(); ?>
 				<!-- Page Content -->
 			</div>
 	   </main>
