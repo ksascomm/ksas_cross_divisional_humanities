@@ -8,7 +8,7 @@
 		     	<?php the_breadcrumb(); ?>
 		    		<h1 class="page-title">News & Announcements <?php the_archive_title();?></h1>
 
-					<?php $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
+					<?php $paged = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
 						if ( false === ( $news_archive_query = get_transient( 'news_archive_query_' . $paged ) ) ) {
 								$news_archive_query = new WP_Query(array(
 									'post_type' => 'post',
