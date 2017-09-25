@@ -60,8 +60,6 @@
 										)
 									),
 									'posts_per_page' => 1,
-									'orderby' => 'rand', 
-									'order' => 'ASC'
 								)); 
 						set_transient( 'highlights_mainpage_query', $highlights_query, 604800 );
 							} 	
