@@ -14,6 +14,15 @@
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
+		<meta property="og:site_name" content="The Alexander Grass Humanities Institute" />
+	    <meta property="og:title" content="The Alexander Grass Humanities Institute | Johns Hopkins University" />
+	    <meta property="og:url" content="https://www.krieger.jhu.edu/humanities-institute" />
+	    <meta property="og:description" content="The Alexander Grass Humanities Institute is a focal point for the 10 world-renowned humanities departments at Johns Hopkins" />
+
+	    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/gilman.jpg" />
+		<meta property="og:image:width" content="1600" />
+		<meta property="og:image:height" content="400" />
+
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 			<!-- Icons & Favicons -->
