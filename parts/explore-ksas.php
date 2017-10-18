@@ -11,7 +11,7 @@
                   <h2>Academics</h2>
                     <ul class="no-bullet" role="menu">
                       <li role="menuitem"><a href="http://krieger.jhu.edu/academics/departments-programs-and-centers/">Departments, Programs, and Centers</a></li>
-                      <li role="menuitem"><a href="http://krieger.jhu.edu/about/faculty/">Faculty Directory</a></li>
+                      <li role="menuitem"><a href="http://krieger.jhu.edu/people/faculty-directory/">Faculty Directory</a></li>
                       <li role="menuitem"><a href="http://krieger.jhu.edu/academics/fields/">Fields of Study</a></li>
                       <li role="menuitem"><a href="http://www.library.jhu.edu/">Libraries</a></li>
                       <li role="menuitem"><a href="http://krieger.jhu.edu/academics/majors-minors/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Majors & Minors')">Majors & Minors</a>
