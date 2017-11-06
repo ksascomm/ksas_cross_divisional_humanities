@@ -2,29 +2,19 @@
 						<div id="inner-footer" class="row">
 
 							<!-- Footer Links -->
-							<div class="small-12 medium-9 columns" role="navigation" aria-label="Footer Menu Links">
-								<ul id="menu-footer-links" class="menu hide-for-small-only" role="menu">
-									<li role="menuitem"><a href="<?php echo get_site_url(); ?>/sitemap/">Sitemap</a></li>
-								<?php if(get_page_by_title('Jobs') || get_page_by_title('Employment Opportunities') || get_page_by_title('Employment') ) : ?>
-									<li role="menuitem"><a href="<?php echo get_site_url(); ?>/about/jobs/">Employment</a></li>
-								<?php else : ?>
+							<div class="small-12 medium-4 columns">
+								<ul id="menu-footer-links" class="menu simple hide-for-small-only" role="menu">
 									<li role="menuitem"><a href="http://krieger.jhu.edu/faculty-jobs/">Employment</a></li>	
-								<?php endif;?>
-									<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts & Info</a></li>
+									<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts</a></li>
 								</ul>
 							</div>
 							<!-- Social Media -->
-							<div class="small-12 medium-3 large-2 columns end" role="navigation" aria-label="Social Media Links">
-								<div class="small-6 columns">
-									<a href="http://facebook.com/jhuksas" title="Facebook"><span class="fa fa-facebook-official fa-3x"></span><span class="screen-reader-text">Facebook</span></a>
-								</div>
-								<div class="small-6 columns">
-									<a href="https://www.youtube.com/user/jhuksas" title="YouTube"><span class="fa fa-youtube-square fa-3x"></span><span class="screen-reader-text">YouTube</span></a>
-								</div>
+							<div class="small-12 medium-3 large-push-5 columns social-media hide-for-small-only">
+								<a href="http://facebook.com/jhuksas" title="Facebook"><span class="fa fa-facebook-official fa-2x"></span><span class="screen-reader-text">Facebook</span></a>
+								<a href="https://www.instagram.com/jhuksas/" title="Instagram"><span class=" fa fa-instagram fa-2x"></span><span class="screen-reader-text">Instagram</span></a>
+								<a href="https://twitter.com/JHUKSAS" title="Twitter"><span class="fa fa-twitter fa-2x"></span><span class="screen-reader-text">Twitter</span></a>
+								<a href="https://www.youtube.com/user/jhuksas" title="YouTube"><span class="fa fa-youtube-square fa-2x"></span><span class="screen-reader-text">YouTube</span></a>
 							</div>
-
-
-
 
 						<!-- Copyright and Address -->
 								<div class="row" id="copyright" role="contentinfo">
@@ -36,7 +26,7 @@
 						  		</div>
 						  		<div class="row">
 							  		<div class="small-12 small-centered medium-4 columns">
-						  				<br><a href="http://www.jhu.edu" title="Johns Hopkins University"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" / alt="Johns Hopkins University logo"></a>
+						  				<a href="http://www.jhu.edu" title="Johns Hopkins University"><img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" / alt="Johns Hopkins University logo"></a>
 						  			</div>
 						  		</div>
 						</div> <!-- end #inner-footer -->
