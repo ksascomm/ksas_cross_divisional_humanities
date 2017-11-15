@@ -147,7 +147,7 @@ a, a:visited {
 	}
 }
 
-#inner-content a, #inner-content-2 a {
+.entry-content a, .article-header a, .breadcrumbs a, .people-directory a {
 	border-bottom: .125em dotted;
 	border-bottom-color: rgba(0,0,0,.1);
 		&:hover, &:focus {
@@ -155,6 +155,10 @@ a, a:visited {
 			border-bottom-color: $primary-color;
 			border-bottom-style: solid;
 		}
+}
+
+.timely a, .entry-content .timely a, .comment-content .timely a, .site-footer .widget .timely a, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited {
+  color: $primary-color;
 }
 
 
@@ -644,6 +648,11 @@ IMAGE GALLERY STYLES
 			a {}
 
 			img {}
+
+			&.gallery-item {
+				display: inline-block;
+				padding-right:10px;
+			}
 
 		}
 
@@ -1190,41 +1199,6 @@ PLUGIN STYLES
     margin: 0;
 }
 
-li.person {
-  margin-bottom: 1.25rem;
-  min-height: 95px;
-  padding-left: 20px;
-  padding-top: 3px;
-  list-style: none;
-}
-
-#directory li.person.sub-head {
-  min-height: 1px;
-  margin-bottom: 0;
-  background: none;
-  padding: 0;
-}
-
-li.person {
-  &.sub-head h2 {
-    font-size: 1.75rem;
-    margin: 0 0 10px 0;
-    color: $black;
-  }
-  img {
-    max-width: 150px;
-    clear: left;
-    float: left;
-    margin-right: 1rem;
-  }
-  h3 {
-  	font-size: 1.5rem;
-  }
-  h4{
-  	font-size: 1.125rem;
-  }
-}
-
 footer.timely.ai1ec-event-footer {
     background: inherit;
 }
@@ -1315,3 +1289,124 @@ footer.timely.ai1ec-event-footer {
     }
   }
 }
+
+li.person {
+  margin-bottom: 1rem;
+  min-height: 95px;
+  padding-left: 20px;
+  padding-top: 3px;
+  list-style: none;
+  width: 100%;
+}
+
+#directory li.person.sub-head {
+  min-height: 1px;
+  margin-bottom: 0;
+  background: none;
+  padding: 0;
+}
+
+li.person {
+  &.sub-head h2 {
+    font-size: 1.75rem;
+    margin: 0 0 10px 0;
+    color: $black;
+  }
+  img {
+    max-width: 150px;
+    clear: left;
+    float: left;
+    margin-right: 1rem;
+  }
+  h3 {
+  	font-size: 1.5rem;
+  }
+  h4{
+  	font-size: 1.125rem;
+  }
+}
+
+.directory-search {
+  .button {
+    margin: .5rem;
+    font-size: .88rem;
+    &.is-checked {
+      background-color: transparent;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+    @include breakpoint(medium only) {
+      font-size: 1.25rem;
+    }
+    @include breakpoint(large) {
+      //padding: 1rem;
+    }
+  }
+}
+
+
+
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  .isotope-item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+  }
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+  &.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    .isotope-item {
+      -webkit-transition-duration: 0s;
+      -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+      -o-transition-duration: 0s;
+      transition-duration: 0s;
+    }
+  }
+  .isotope-item.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+  }
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+/* End: Recommended Isotope styles */

@@ -7148,13 +7148,16 @@ LINK STYLES
 a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-#inner-content a, #inner-content-2 a {
+.entry-content a, .article-header a, .breadcrumbs a, .people-directory a {
   border-bottom: .125em dotted;
   border-bottom-color: rgba(0, 0, 0, 0.1); }
-  #inner-content a:hover, #inner-content a:focus, #inner-content-2 a:hover, #inner-content-2 a:focus {
+  .entry-content a:hover, .entry-content a:focus, .article-header a:hover, .article-header a:focus, .breadcrumbs a:hover, .breadcrumbs a:focus, .people-directory a:hover, .people-directory a:focus {
     color: #2C2C33;
     border-bottom-color: #8a2a2b;
     border-bottom-style: solid; }
+
+.timely a, .entry-content .timely a, .comment-content .timely a, .site-footer .widget .timely a, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited {
+  color: #8a2a2b; }
 
 .breadcrumbs li {
   font-size: 14px; }
@@ -7512,6 +7515,10 @@ POSTS & CONTENT STYLES
 /*********************
 IMAGE GALLERY STYLES
 *********************/
+.gallery dl.gallery-item {
+  display: inline-block;
+  padding-right: 10px; }
+
 /*********************
 PAGE NAVI STYLES
 *********************/
@@ -7844,36 +7851,6 @@ PLUGIN STYLES
   list-style: none outside none;
   margin: 0; }
 
-li.person {
-  margin-bottom: 1.25rem;
-  min-height: 95px;
-  padding-left: 20px;
-  padding-top: 3px;
-  list-style: none; }
-
-#directory li.person.sub-head {
-  min-height: 1px;
-  margin-bottom: 0;
-  background: none;
-  padding: 0; }
-
-li.person.sub-head h2 {
-  font-size: 1.75rem;
-  margin: 0 0 10px 0;
-  color: #2C2C33; }
-
-li.person img {
-  max-width: 150px;
-  clear: left;
-  float: left;
-  margin-right: 1rem; }
-
-li.person h3 {
-  font-size: 1.5rem; }
-
-li.person h4 {
-  font-size: 1.125rem; }
-
 footer.timely.ai1ec-event-footer {
   background: inherit; }
 
@@ -7940,6 +7917,73 @@ footer.timely.ai1ec-event-footer {
   .events-feed .timely .ai1ec-btn-default:hover {
     border-bottom-color: #adadad !important; }
 
+li.person {
+  margin-bottom: 1rem;
+  min-height: 95px;
+  padding-left: 20px;
+  padding-top: 3px;
+  list-style: none;
+  width: 100%; }
+
+#directory li.person.sub-head {
+  min-height: 1px;
+  margin-bottom: 0;
+  background: none;
+  padding: 0; }
+
+li.person.sub-head h2 {
+  font-size: 1.75rem;
+  margin: 0 0 10px 0;
+  color: #2C2C33; }
+
+li.person img {
+  max-width: 150px;
+  clear: left;
+  float: left;
+  margin-right: 1rem; }
+
+li.person h3 {
+  font-size: 1.5rem; }
+
+li.person h4 {
+  font-size: 1.125rem; }
+
+.directory-search .button {
+  margin: .5rem;
+  font-size: .88rem; }
+  .directory-search .button.is-checked {
+    background-color: transparent;
+    border: 1px solid #8a2a2b;
+    color: #8a2a2b; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .directory-search .button {
+      font-size: 1.25rem; } }
+
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+.isotope {
+  transition-duration: 0.8s;
+  transition-property: height, width; }
+  .isotope .isotope-item {
+    transition-duration: 0.8s;
+    transition-property: transform, opacity; }
+  .isotope.no-transition {
+    transition-duration: 0s; }
+    .isotope.no-transition .isotope-item {
+      transition-duration: 0s; }
+  .isotope .isotope-item.no-transition {
+    transition-duration: 0s; }
+
+/**** disabling Isotope CSS3 transitions ****/
+/* End: Recommended Isotope styles */
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet
